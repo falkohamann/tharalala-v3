@@ -26,7 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin-top: 60px; /* Add this to account for fixed header */
+    margin-top: 60px;
     position: relative;
 }
 
@@ -87,24 +87,6 @@ nav a:hover {
     color: var(--secondary-color);
 }
 
-/* Hamburger Menu */
-#hamburger-menu {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-}
-
-#hamburger-menu span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #ecf39e;
-    margin: 5px 0;
-    transition: 0.4s;
-}
-
 /* Sections */
 .container {
     max-width: 1200px;
@@ -113,24 +95,18 @@ nav a:hover {
 }
 
 section {
-    padding: 4rem 0;
+    padding: 2rem 0;
     background-color: var(--background-color);
     position: relative;
-    /*z-index: 1; remove this*/
-    min-height: 100vh;
+    z-index: 2;
 }
 
-/* Parallax Container Styles */
+/* Parallax Styles */
 .parallax-container {
-    height: 100vh;
+    height: 700px;
     width: 100%;
-    position: relative; /* Changed to relative */
-    overflow: hidden; /* Added to prevent content overflow */
-    /*top: 0; remove this*/
-    /*left: 0; remove this*/
-    /*z-index: 0; remove this*/
-    /*opacity: 0; remove this*/
-    /*transition: opacity 0.5s ease; remove this*/
+    position: relative;
+    overflow: hidden;
 }
 
 .parallax-background {
@@ -139,12 +115,14 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 1;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+    transform: translateZ(0);
+    height: 120%;
     width: 100%;
-    background-attachment: fixed; /* Add this for parallax effect */
+    will-change: transform;
 }
 
 /* Welcome Banner */
@@ -153,7 +131,7 @@ section {
     padding: 6rem 0;
     background-color: rgba(236, 243, 158, 0.9);
     position: relative;
-    /*z-index: 1; remove this*/
+    z-index: 2;
 }
 
 /* Typography */
@@ -264,24 +242,6 @@ h2 {
     color: #333;
 }
 
-/* Social Links */
-.social-links {
-    margin-top: 1rem;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.social-links a {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--secondary-color);
-}
-
 /* Footer */
 footer {
     background-color: var(--primary-color);
@@ -290,7 +250,7 @@ footer {
     padding: 1rem 0;
     margin-top: auto;
     position: relative;
-    /*z-index: 1; remove this*/
+    z-index: 2;
 }
 
 footer a {
@@ -301,48 +261,6 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-/* Mobile Navigation */
-@media (max-width: 768px) {
-    #nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: rgba(49, 87, 44, 0.9);
-    }
-
-    #nav-links li {
-        margin-left: 0;
-    }
-
-    #nav-links.show {
-        display: flex;
-    }
-
-    #hamburger-menu {
-        display: block;
-    }
-
-    #hamburger-menu.open span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    #hamburger-menu.open span:nth-child(2) {
-        opacity: 0;
-    }
-
-    #hamburger-menu.open span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-
-    nav li {
-        padding: 1rem;
-        border-top: 1px solid rgba(236, 243, 158, 0.1);
-    }
 }
 
 /* Responsive Design */
@@ -368,8 +286,29 @@ footer a:hover {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 
-    section {
-        min-height: 50vh;
+    /* Mobile Navigation */
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(49, 87, 44, 0.9);
+    }
+
+    #nav-links.show {
+        display: flex;
+    }
+
+    nav li {
+        margin-left: 0;
+        padding: 1rem;
+        border-top: 1px solid rgba(236, 243, 158, 0.1);
+    }
+
+    #hamburger-menu {
+        display: block;
     }
 }
 
@@ -394,4 +333,34 @@ footer a:hover {
         width: 95%;
         max-width: none;
     }
+}
+
+/* Hamburger Menu */
+#hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ecf39e;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+#hamburger-menu.open span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+#hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger-menu.open span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }

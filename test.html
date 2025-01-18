@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parallax Test</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .parallax-container {
+            width: 100%;
+            height: 500px; /* Or any height */
+            position: relative;
+            overflow: hidden;
+        }
+        .parallax-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("assets/images/concert-2.jpg"); /* Your image path */
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax-container">
+        <div class="parallax-background"></div>
+    </div>
+</body>
+</html>
