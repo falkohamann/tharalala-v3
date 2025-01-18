@@ -21,26 +21,24 @@
                     <span></span>
                 </button>
                 <ul id="nav-links">
-                    <li><a href="#" data-page="startseite">Startseite</a></li>
-                    <li><a href="#" data-page="aktuelles">Aktuelles</a></li>
-                    <li><a href="#" data-page="programm">Programm 2025</a></li>
-                    <li><a href="#" data-page="kuenstler">Künstler</a></li>
-                    <li><a href="#" data-page="tickets">Tickets</a></li>
-                    <li><a href="#" data-page="bilder">Bilder</a></li>
-                    <li><a href="#" data-page="vergangenes">Vergangenes</a></li>
-                    <li><a href="#" data-page="kontakt">Kontakt</a></li>
+                    <li><a href="#welcome-banner">Startseite</a></li>
+                    <li><a href="#program">Programm</a></li>
+                    <li><a href="#artists">Künstler</a></li>
+                    <li><a href="#info">Info</a></li>
+                    <li><a href="#location">Location</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main id="main-content">
-        <section id="welcome">
-            <div class="container">
-                <h1>Willkommen beim Tharalala Musik Festival!</h1>
-            </div>
+        <section id="welcome-banner">
+            <h1>Willkommen beim Tharalala Musik Festival!</h1>
         </section>
-        <section id="image-section-1" class="image-section" style="background-image: url('assets/images/concert-2.jpg');"></section>
+
+        <div class="parallax-container" id="parallax1">
+            <div class="parallax-background" style="background-image: url('assets/images/concert-2.jpg');"></div>
+        </div>
 
         <section id="program">
             <div class="container">
@@ -64,11 +62,14 @@
                             <td>18:00 - <a href="#">Band E</a></td>
                             <td>16:00 - <a href="#">Band F</a></td>
                         </tr>
-                        </tbody>
+                    </tbody>
                 </table>
             </div>
         </section>
-        <section id="image-section-2" class="image-section" style="background-image: url('assets/images/concert-1.jpg');"></section>
+
+        <div class="parallax-container" id="parallax2">
+            <div class="parallax-background" style="background-image: url('assets/images/concert-1.jpg');"></div>
+        </div>
 
         <section id="artists">
             <div class="container">
@@ -89,6 +90,7 @@
                 </div>
             </div>
         </section>
+
         <div id="artistModal" class="modal">
             <div class="modal-content">
                 <span class="close-button">×</span>
@@ -108,26 +110,31 @@
             </div>
         </div>
 
-        <section id="image-section-3" class="image-section" style="background-image: url('assets/images/concert-5.jpg');"></section>
+        <div class="parallax-container" id="parallax3">
+            <div class="parallax-background" style="background-image: url('assets/images/concert-5.jpg');"></div>
+        </div>
 
         <section id="info">
             <div class="container">
                 <h2>Festival Info</h2>
-               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-            </p>  </div>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
         </section>
 
-        <section id="image-section-4" class="image-section" style="background-image: url('assets/images/concert-4.jpg');"></section>
+        <div class="parallax-container" id="parallax4">
+            <div class="parallax-background" style="background-image: url('assets/images/concert-4.jpg');"></div>
+        </div>
 
         <section id="location">
             <div class="container">
                 <h2>Location</h2>
-               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-            </p> </div>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
         </section>
-        <section id="image-section-5" class="image-section" style="background-image: url('assets/images/concert-3.jpg');"></section>
+
+        <div class="parallax-container" id="parallax5">
+            <div class="parallax-background" style="background-image: url('assets/images/concert-3.jpg');"></div>
+        </div>
     </main>
 
     <footer>
