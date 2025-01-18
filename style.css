@@ -116,21 +116,14 @@ section {
     padding: 4rem 0;
     background-color: var(--background-color);
     position: relative;
-    /*z-index: 1; remove this*/
-    min-height: 100vh;
+    min-height: 100px;
 }
 
 /* Parallax Container Styles */
 .parallax-container {
-    height: 100vh;
+    height: 700px;
     width: 100%;
-    position: relative; /* Changed to relative */
-    overflow: hidden; /* Added to prevent content overflow */
-    /*top: 0; remove this*/
-    /*left: 0; remove this*/
-    /*z-index: 0; remove this*/
-    /*opacity: 0; remove this*/
-    /*transition: opacity 0.5s ease; remove this*/
+    position: relative;
 }
 
 .parallax-background {
@@ -153,7 +146,8 @@ section {
     padding: 6rem 0;
     background-color: rgba(236, 243, 158, 0.9);
     position: relative;
-    /*z-index: 1; remove this*/
+    height: 600px;  /* Added fixed height */
+    width: 100%;    /* Explicitly set width */
 }
 
 /* Typography */
