@@ -3,7 +3,7 @@
     --primary-color: #4f772d;
     --secondary-color: #90a955;
     --background-color: #ecf39e;
-    --text-color: #333;
+    --text-color: #ecf39e;
     --font-family: 'Arial', sans-serif;
 }
 
@@ -114,16 +114,17 @@ nav a:hover {
 
 section {
     padding: 4rem 0;
-    background-color: var(--background-color);
+    background-color: rgba(236, 243, 158, 0.7); /* Using the same color as --background-color but with 0.7 opacity */
     position: relative;
     min-height: 100px;
 }
 
 /* Parallax Container Styles */
 .parallax-container {
-    height: 700px;
+    height: 60vh;  /* Changed from 700px to be more responsive */
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .parallax-background {
@@ -137,7 +138,9 @@ section {
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
-    background-attachment: fixed; /* Add this for parallax effect */
+    background-attachment: fixed;
+    background-color: #ecf39e;
+    opacity: 0.7;
 }
 
 /* Welcome Banner */
