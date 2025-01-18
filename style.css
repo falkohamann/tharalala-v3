@@ -26,7 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin-top: 60px; /* Add this to account for fixed header */
+    margin-top: 60px; /* Account for fixed header */
     position: relative;
 }
 
@@ -107,8 +107,8 @@ nav a:hover {
 
 /* Sections */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0 100px 0 100px;
     padding: 0 20px;
 }
 
@@ -121,7 +121,7 @@ section {
 
 /* Parallax Container Styles */
 .parallax-container {
-    height: 60vh;  /* Changed from 700px to be more responsive */
+    height: 50vh;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -149,8 +149,28 @@ section {
     padding: 6rem 0;
     background-color: rgba(236, 243, 158, 0.9);
     position: relative;
-    height: 600px;  /* Added fixed height */
+    /* height: 600px;  Removed fixed height for better responsiveness*/
     width: 100%;    /* Explicitly set width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image Styling for Welcome Banner and Responsive Images*/
+#welcome-banner img {
+    max-width: 90%; /* Adjusted from 100% to allow some padding */
+    height: auto;
+    display: block; /* Makes the image a block-level element */
+    margin: 0 auto; /* Centers the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    border-radius: 10px; /* Softens the corners */
+}
+/* Add a media query for smaller screens, as the max-width might still be too large */
+@media (max-width: 768px) {
+    #welcome-banner img {
+        max-width: 95%;
+    }
 }
 
 /* Typography */
@@ -316,8 +336,9 @@ footer a:hover {
         margin-left: 0;
     }
 
+    /* Show the menu when 'show' class is added */
     #nav-links.show {
-        display: flex;
+        display: flex; /* Or you could use display: block; */
     }
 
     #hamburger-menu {
@@ -391,4 +412,128 @@ footer a:hover {
         width: 95%;
         max-width: none;
     }
+}
+
+#contact .container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the start (left) */
+    gap: 20px;
+    margin: 0 100px 0 100px;
+}
+
+/* Wrapper for the two columns */
+#contact .content-wrapper {
+    display: flex;
+    justify-content: center; /* Center the two columns */
+    gap: 20px;
+    width: 100%; /* Adjust width as needed */
+    margin: 0 auto;
+}
+
+/* "Kontakt" image styles */
+#contact .contact-image {
+    max-width: 20%; /* Adjust the size as needed */
+    height: auto;
+    display: block; /* Makes the image a block-level element */
+}
+
+.contact-section,
+.form-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--primary-color);
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.contact-info p {
+    margin: 5px 0;
+    color: var(--primary-color);
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-section textarea {
+    height: 150px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox-container label {
+    color: var(--primary-color);
+}
+
+.checkbox-container a {
+    color: var(--primary-color);
+}
+
+.math-captcha {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.math-captcha input[type="text"] {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.form-section input[type="submit"] {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-section input[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Two-column layout for contact and form */
+#contact .container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#contact .contact-section {
+    width: 45%;
+}
+
+#contact .form-section {
+    width: 55%;
 }

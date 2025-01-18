@@ -5,39 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tharalala Musik Festival</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script defer src="scripts.js"></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo_rund_tr.png" alt="Tharalala Festival Logo">
-            </a>
-            <nav>
-                <button id="hamburger-menu" aria-label="Menü öffnen">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul id="nav-links">
-                    <li><a href="#welcome-banner">Startseite</a></li>
-                    <li><a href="#program">Programm</a></li>
-                    <li><a href="#artists">Künstler</a></li>
-                    <li><a href="#info">Info</a></li>
-                    <li><a href="#location">Location</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+       </header>
 
+    <div id="header"></div>
     <main id="main-content">
         <section id="welcome-banner">
             <img src="assets/images/welcome.png" alt="Willkommen beim Tharalala Musik Festival!">
         </section>
 
         <div class="parallax-container" id="parallax1">
-            <div class="parallax-background" style="background-image: url('assets/images/concert-2.jpg');"></div>
+            <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-27.jpeg');"></div>
         </div>
 
         <section id="program">
@@ -68,7 +50,7 @@
         </section>
 
         <div class="parallax-container" id="parallax2">
-            <div class="parallax-background" style="background-image: url('assets/images/concert-1.jpg');"></div>
+            <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-21.jpeg');"></div>
         </div>
 
         <section id="artists">
@@ -111,7 +93,7 @@
         </div>
 
         <div class="parallax-container" id="parallax3">
-            <div class="parallax-background" style="background-image: url('assets/images/concert-5.jpg');"></div>
+            <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-23.jpeg');"></div>
         </div>
 
         <section id="info">
@@ -122,7 +104,7 @@
         </section>
 
         <div class="parallax-container" id="parallax4">
-            <div class="parallax-background" style="background-image: url('assets/images/concert-4.jpg');"></div>
+            <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-7.jpeg');"></div>
         </div>
 
         <section id="location">
@@ -133,18 +115,73 @@
         </section>
 
         <div class="parallax-container" id="parallax5">
-            <div class="parallax-background" style="background-image: url('assets/images/concert-3.jpg');"></div>
+            <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-20.jpeg');"></div>
+        </div>
+        <section id="pictures">
+            <div class="container">
+                <img src="assets/images/pictures.png" alt="Bilder">
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+        </section>
+
+        <div class="parallax-container" id="parallax5">
+            <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-10.jpeg');"></div>
+        </div>
+        <section id="past">
+            <div class="container">
+                <img src="assets/images/past.png" alt="Vergangenes">
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+        </section>
+
+        <div class="parallax-container" id="parallax5">
+            <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-1.jpeg');"></div>
+        </div>
+        <section id="contact">
+        <div class="container">
+            <img src="assets/images/contact.png" alt="Kontakt" class="contact-image"> <div class="content-wrapper">
+                <div class="contact-section">
+                    <div class="contact-info">
+                        <h3>LEITUNG / ALLGEMEINE ANFRAGEN</h3>
+                        <p>info@tharalala.de</p>
+                    </div>
+                    <div class="contact-info">
+                        <h3>BOOKING ANFRAGEN</h3>
+                        <p>booking@htharalala.de</p>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h2>WIR MELDEN UNS!</h2>
+                    <form action="#" method="post">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Nachricht</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="data-privacy" name="data-privacy" required>
+                            <label for="data-privacy">Mit dem Absenden dieser Nachricht akzeptiere ich die <a
+                                    href="#">Datenschutzerklärung</a></label>
+                        </div>
+                        <div class="math-captcha">
+                            <label for="captcha">2 + 11 =</label>
+                            <input type="text" id="captcha" name="captcha" required>
+                        </div>
+                        <input type="submit" value="SENDEN">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <div class="parallax-container" id="parallax6">
+            <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-3.jpeg');"></div>
         </div>
     </main>
+<div id="footer"></div>
 
     <footer>
-        <div class="container">
-            <p>&copy; Tharalala Musik Festival</p>
-            <p>
-                <a href="#" data-page="impressum">Impressum</a>
-                <a href="#" data-page="datenschutz">Datenschutz</a>
-            </p>
-        </div>
-    </footer>
+       </footer>
 </body>
 </html>
