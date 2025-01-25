@@ -194,7 +194,7 @@ h2 {
 /* Program Table */
 .program-table {
     width: 95%;
-    margin: 20px auto;
+    margin: 20px auto; /* Auto margins should center the table */
     border-collapse: collapse;
     background-color: #fff;
 }
@@ -322,7 +322,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Mobile Navigation */
+/* Mobile Navigation and Responsiveness*/
 @media (max-width: 768px) {
     #nav-links {
         display: none;
@@ -363,12 +363,10 @@ footer a:hover {
         padding: 1rem;
         border-top: 1px solid rgba(236, 243, 158, 0.1);
     }
-}
 
-/* Responsive Design */
-@media (max-width: 768px) {
     .container {
         padding: 0 15px;
+        margin: 0;
     }
 
     h1 {
@@ -436,10 +434,10 @@ footer a:hover {
 
 /* "Kontakt" image styles */
 #contact .contact-image {
-    max-width: 20%;
+    max-width: 20%; /* Adjust the size as needed */
     height: auto;
-    display: block;
-    margin-bottom: 20px; /* Add space below the image */
+    display: block; /* Makes the image a block-level element */
+    margin-bottom: 20px;
 }
 
 /* Contact and Form sections */
@@ -551,6 +549,7 @@ footer a:hover {
     }
 }
 
+/* Mobile Responsiveness for Contact and Form */
 @media (max-width: 768px) {
     #contact .content-wrapper{
       flex-direction: column;
