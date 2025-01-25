@@ -416,8 +416,9 @@ footer a:hover {
     }
 }
 
+/* Contact Section */
 #contact .container {
-    display: flex;
+    /*display: flex; No need for flex here since it stacks vertically */
     flex-direction: column; /* Stack elements vertically */
     align-items: flex-start; /* Align items to the start (left) */
     gap: 20px;
@@ -440,6 +441,7 @@ footer a:hover {
     display: block; /* Makes the image a block-level element */
 }
 
+/* Contact and Form sections */
 .contact-section,
 .form-section {
     background-color: #fff;
@@ -447,6 +449,8 @@ footer a:hover {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: var(--primary-color);
+    width: 100%; /* Add this to make sections take full width by default */
+    box-sizing: border-box; /* Add this to include padding and border in the element's total width and height */
 }
 
 .contact-info {
@@ -525,17 +529,41 @@ footer a:hover {
     background-color: var(--secondary-color);
 }
 
-/* Two-column layout for contact and form */
-#contact .container {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
+/* Media Query for Responsive Two-Column Layout */
+@media (min-width: 769px) { /* Adjust the breakpoint as needed */
+    #contact .container {
+        display: flex; /* Apply flex only on larger screens */
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    #contact .contact-section {
+        width: 45%;
+    }
+
+    #contact .form-section {
+        width: 55%;
+    }
+
+    #contact .content-wrapper{
+      flex-direction: row;
+    }
 }
 
-#contact .contact-section {
-    width: 45%;
-}
+@media (max-width: 768px) {
+    #contact .content-wrapper{
+      flex-direction: column;
+    }
 
-#contact .form-section {
-    width: 55%;
+    #contact .contact-image{
+      max-width: 50%;
+    }
+
+    #contact .container{
+      margin: 0;
+    }
+
+    .form-section textarea{
+      height: 50vh;
+    }
 }
