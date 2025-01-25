@@ -269,6 +269,7 @@ h2 {
     height: 100%;
     background-color: #00000080; /* rgba(0, 0, 0, 0.5) */
     z-index: 1000;
+    overflow-y: auto; /* Allow vertical scrolling for the entire modal */
 }
 
 .modal-content {
@@ -279,9 +280,11 @@ h2 {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    max-width: 80%;
-    max-height: 80%;
-    overflow: auto;
+    max-width: 80%;  /* Still useful to limit width on very large screens */
+    width: 80%;    /* Allow modal to size itself based on content */
+    max-height: 80vh; /* Prevents modal from being taller than viewport */
+    /* Remove or adjust height constraint if you want modal to be taller */
+    /* height: auto;   Use this to remove any height constraint */
 }
 
 .close-button {
@@ -291,6 +294,38 @@ h2 {
     font-size: 24px;
     cursor: pointer;
     color: #333;
+}
+
+/* Modal Header Image */
+.modal-header img {
+    max-width: 100%; /* Image will not exceed the width of its container */
+    height: auto;    /* Height will adjust automatically to maintain aspect ratio */
+    display: block;  /* Makes the image a block-level element */
+    margin: 0 auto;  /* Centers the image horizontally */
+}
+
+/* Add a new class for the modal body to allow scrolling within it */
+.modal-body {
+    max-height: 50vh; /* Reduced from 60vh - Adjust as needed for content */
+    overflow-y: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff; /* White 'x' for good contrast */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    border-radius: 50%; /* Make the background circular */
+    width: 30px;
+    height: 30px;
+    display: flex; /* Use flexbox to center the 'x' */
+    justify-content: center;
+    align-items: center;
+    line-height: 1; /* Adjust if needed to fine-tune vertical centering */
+    transition: background-color 0.2s; /* Smooth transition on hover */
 }
 
 /* Social Links */
@@ -334,6 +369,12 @@ footer a:hover {
 
 /* Mobile Navigation and Responsiveness*/
 @media (max-width: 768px) {
+    .modal-content {
+        width:95%;
+        max-width: 95%; /* Wider on smaller screens */
+        max-height: 90vh;
+    }
+
     #nav-links {
         display: none;
         flex-direction: column;
