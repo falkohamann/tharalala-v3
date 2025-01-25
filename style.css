@@ -171,7 +171,17 @@ section {
 /* Add a media query for smaller screens, as the max-width might still be too large */
 @media (max-width: 768px) {
     #welcome-banner img {
-        max-width: 95%;
+        min-width: 95%;
+    }
+}
+@media (max-width: 768px) {
+    .parallax-background{
+        background-size: cover;
+        background-position: center top;
+    }
+    .parallax-container {
+        height: auto;
+        min-height: 50vh;
     }
 }
 
