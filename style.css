@@ -2,8 +2,8 @@
 :root {
     --primary-color: #4f772d;
     --secondary-color: #90a955;
-    --background-color: #ecf39e;
-    --text-color: #ecf39e;
+    --background-color: #90a955;
+    --text-color: #90a955;
     --font-family: 'Arial', sans-serif;
 }
 
@@ -32,14 +32,15 @@ body {
 
 /* Header and Navigation */
 header {
-    background: rgba(49, 87, 44, 0.9);
-    color: #ecf39e;
+    background: #31572CE6; /* rgba(49, 87, 44, 0.9) */
+    color: #90a955;
     padding: 0;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    border: 5px solid #ecf39e;
 }
 
 header .container {
@@ -100,7 +101,7 @@ nav a:hover {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: #ecf39e;
+    background-color: #90a955;
     margin: 5px 0;
     transition: 0.4s;
 }
@@ -114,9 +115,10 @@ nav a:hover {
 
 section {
     padding: 4rem 0;
-    background-color: rgba(236, 243, 158, 0.7); /* Using the same color as --background-color but with 0.7 opacity */
+    background-color: #90a955; /* rgba(236, 243, 158, 0.7) */
     position: relative;
     min-height: 100px;
+    border: 5px solid #ecf39e; /* Add this line */
 }
 
 /* Parallax Container Styles */
@@ -139,7 +141,7 @@ section {
     height: 100%;
     width: 100%;
     background-attachment: fixed;
-    background-color: #ecf39e;
+    background-color: #90a955;
     opacity: 0.7;
 }
 
@@ -147,7 +149,7 @@ section {
 #welcome-banner {
     text-align: center;
     padding: 6rem 0;
-    background-color: rgba(236, 243, 158, 0.9);
+    background-color: #90a955; /* rgba(236, 243, 158, 0.9) */
     position: relative;
     /* height: 600px;  Removed fixed height for better responsiveness*/
     width: 100%;    /* Explicitly set width */
@@ -255,7 +257,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #00000080; /* rgba(0, 0, 0, 0.5) */
     z-index: 1000;
 }
 
@@ -302,7 +304,7 @@ h2 {
 /* Footer */
 footer {
     background-color: var(--primary-color);
-    color: #ecf39e;
+    color: #90a955;
     text-align: center;
     padding: 1rem 0;
     margin-top: auto;
@@ -311,7 +313,7 @@ footer {
 }
 
 footer a {
-    color: #ecf39e;
+    color: #90a955;
     text-decoration: none;
     margin: 0 10px;
 }
@@ -329,7 +331,7 @@ footer a:hover {
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(49, 87, 44, 0.9);
+        background: #31572CE6; /* rgba(49, 87, 44, 0.9) */
     }
 
     #nav-links li {
