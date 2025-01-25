@@ -436,9 +436,10 @@ footer a:hover {
 
 /* "Kontakt" image styles */
 #contact .contact-image {
-    max-width: 20%; /* Adjust the size as needed */
+    max-width: 20%;
     height: auto;
-    display: block; /* Makes the image a block-level element */
+    display: block;
+    margin-bottom: 20px; /* Add space below the image */
 }
 
 /* Contact and Form sections */
