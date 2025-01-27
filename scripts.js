@@ -4,9 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('header').innerHTML = data;
-
             // Set up mobile menu AFTER header is loaded
             setupMobileMenu();
+            // Set up smooth scrolling AFTER header is loaded
+            setupSmoothScrolling();
         });
 
     // Load footer content
@@ -22,40 +23,69 @@ document.addEventListener('DOMContentLoaded', function() {
         const navLinks = document.getElementById('nav-links');
 
         if (hamburgerMenu && navLinks) {
-            hamburgerMenu.addEventListener('click', function() {
+            hamburgerMenu.addEventListener('click', function(event) {
                 navLinks.classList.toggle('show');
                 this.classList.toggle('open');
+                event.stopPropagation();
+            });
+
+            // Handle clicks on the links
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default action
+
+                    // Close the mobile menu
+                    navLinks.classList.remove('show');
+                    hamburgerMenu.classList.remove('open');
+
+                    // Get the target section and scroll to it
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Prevent clicks within navLinks from closing the menu immediately
+            navLinks.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+
+            // Close the menu when clicking outside of it
+            document.addEventListener('click', function(event) {
+                if (!navLinks.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+                    navLinks.classList.remove('show');
+                    hamburgerMenu.classList.remove('open');
+                }
             });
         }
     }
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+    // Function to set up smooth scrolling for non-navigation links
+    function setupSmoothScrolling() {
+        document.querySelectorAll('a[href^="#"]:not(#nav-links a)').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
 
-            // Close mobile menu if it's open
-            const hamburgerMenu = document.getElementById('hamburger-menu'); // Get it here
-            const navLinks = document.getElementById('nav-links'); // Get it here
-            if (window.innerWidth < 768 && hamburgerMenu && navLinks) {
-                navLinks.classList.remove('show');
-                hamburgerMenu.classList.remove('open');
-            }
-
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
-    });
+    }
 
-    // Artist modal functionality
+    // --- Artist Modal Functionality ---
     const artistModal = document.getElementById('artistModal');
     const closeButton = document.querySelector('.close-button');
 
-    // Sample artist data - replace with your actual data
+    // Sample artist data (replace with your actual data)
     const artistData = {
         artist1: {
             name: "Artist 1",
@@ -88,11 +118,11 @@ document.addEventListener('DOMContentLoaded', function() {
             instagram: "https://instagram.com/artist4",
             spotify: "https://open.spotify.com/artist/artist4",
             website: "https://artist4.com"
-        },
-        // Add more artists as needed
+        }
     };
 
-    function openModal(element) {
+    // Function to open the modal
+    window.openModal = function(element) {
         const artistId = element.getAttribute('data-artist-id');
         const artist = artistData[artistId];
 
@@ -104,14 +134,13 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('instagram-link').href = artist.instagram;
             document.getElementById('spotify-link').href = artist.spotify;
             document.getElementById('website-link').href = artist.website;
-        }
 
-        artistModal.style.display = 'block';
+            artistModal.style.display = 'block';
+        }
     }
 
-    window.openModal = openModal; // Make function globally available
-
-    if (closeButton && artistModal) { // Check if elements exist
+    // Close modal functionality
+    if (closeButton && artistModal) {
         closeButton.onclick = function() {
             artistModal.style.display = 'none';
         };
