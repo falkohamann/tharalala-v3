@@ -11,7 +11,7 @@
 </head>
 <header>
         <div class="container">
-            <a href="index.html" class="logo">
+            <a href="index.php" class="logo">
                 <img src="assets/images/logo_rund_tr.png" alt="Tharalala Festival Logo">
             </a>
             <nav>

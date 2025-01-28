@@ -442,6 +442,7 @@ textarea {
 }
 .gallery-container {
         max-width: 1200px;
+        margin-top: 30px;
         margin: 0 auto;
         padding: 20px;
         background-color: #ebeb9f;  /* Changed from white/default */
@@ -617,6 +618,9 @@ textarea {
     color: #ecf39e;
     transform: translateY(-50%) scale(1.1);
 }
+.text-container {
+     margin-bottom: 30px; /* Adjust the spacing as needed */
+ }
 
 /* --- Mobile Styles --- */
 @media (max-width: 768px) {

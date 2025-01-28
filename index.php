@@ -140,8 +140,61 @@
     <section id="pictures">
         <div class="container">
             <img src="assets/images/pictures.png" alt="Bilder">
+            <div class="text-container">
             <p>Taucht ein in magische Festival-Momente! Unsere Bildergalerie nimmt euch mit auf eine visuelle Reise durch das Tharalala Musik Festival - von mitreißenden Live-Performances über ausgelassene Tanzszenen bis hin zu den kleinen, besonderen Augenblicken, die dieses Festival so einzigartig machen. Lasst die Atmosphäre noch einmal aufleben und entdeckt vielleicht sogar euch selbst in einem der Schnappschüsse.</p>
-            <p><br><a href="gallery.php">Hier geht es zu unseren Bildern!</a></p>
+            </div>
+            <div class="gallery-container">
+    <?php
+    $galleryPath = 'assets/images/gallery';
+    $subfolders = array_filter(glob($galleryPath . '/*'), 'is_dir');
+
+    // Sort subfolders in reverse order (newest first)
+    rsort($subfolders);
+
+    foreach ($subfolders as $subfolder) {
+        $folderName = basename($subfolder);
+        $images = glob($subfolder . '/*.{webp}', GLOB_BRACE);
+
+        if (!empty($images)) {
+            echo "<section class='gallery-section'>";
+            echo "<div class='folder-header'>";
+            echo "<h2>" . htmlspecialchars($folderName) . "</h2>";
+            echo "<button class='toggle-btn' aria-expanded='false'>
+                    <span class='icon'>▼</span>
+                    <span class='sr-only'>Toggle folder</span>
+                  </button>";
+            echo "</div>";
+
+            echo "<div class='image-grid collapsed'>";
+            foreach ($images as $image) {
+                $imageName = basename($image);
+                echo "<div class='image-item'>";
+                echo "<img src='" . htmlspecialchars($image) . "'
+                          alt='" . htmlspecialchars($imageName) . "'
+                          loading='lazy'>";
+                echo "</div>";
+            }
+            echo "</div>";
+            echo "</section>";
+        }
+    }
+    ?>
+
+<div class="gallery-modal">
+    <div class="gallery-modal-content">
+        <span class="gallery-close-button">&times;</span>
+        <button class="gallery-nav-btn gallery-prev">&lt;</button>
+        <img class="gallery-modal-image" src="" alt="">
+        <button class="gallery-nav-btn gallery-next">&gt;</button>
+    </div>
+</div>
+</div>
+    <div class="gallery-modal">
+    <div class="gallery-modal-content">
+        <span class="gallery-close-button">&times;</span>
+        <img class="gallery-modal-image" src="" alt="">
+    </div>
+</div>
         </div>
     </section>
 
@@ -197,6 +250,7 @@
     </div>
 </main>
 <div id="footer"></div>
+<script src="gallery.js"></script>
 <?php include 'footer.php'; ?>
 </body>
 </html>
