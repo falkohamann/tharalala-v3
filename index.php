@@ -67,46 +67,44 @@
     <div class="parallax-container" id="parallax2">
         <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-13.jpeg');"></div>
     </div>
-
-    <section id="artists">
-        <div class="container">
-            <img src="assets/images/kuenstler.png" alt="Künstler">
-            <div class="artists-grid">
-                <a href="javascript:void(0);" onclick="openModal(this);" data-img-index="0" class="artists-grid-item" data-artist-id="artist1">
-                    <img src="assets/images/artist_tiles/artist_kachel4.jpg" alt="Artist 1">
-                </a>
-                <a href="javascript:void(0);" onclick="openModal(this);" data-img-index="1" class="artists-grid-item" data-artist-id="artist2">
-                    <img src="assets/images/artist_tiles/artist_kachel4.jpg" alt="Artist 2">
-                </a>
-                <a href="javascript:void(0);" onclick="openModal(this);" data-img-index="2" class="artists-grid-item" data-artist-id="artist3">
-                    <img src="assets/images/artist_tiles/artist_kachel4.jpg" alt="Artist 3">
-                </a>
-                <a href="javascript:void(0);" onclick="openModal(this);" data-img-index="3" class="artists-grid-item" data-artist-id="artist4">
-                    <img src="assets/images/artist_tiles/artist_kachel4.jpg" alt="Artist 4">
-                </a>
-            </div>
+<section id="artists">
+    <div class="container">
+        <img src="assets/images/kuenstler.png" alt="Künstler">
+        <div class="artists-grid">
+            <a href="javascript:void(0);" class="artists-grid-item" data-artist-id="artist1">
+                <img src="assets/images/artist_tiles/artist_kachel4.jpg" alt="Artist 1">
+            </a>
+            <a href="javascript:void(0);" class="artists-grid-item" data-artist-id="artist2">
+                <img src="assets/images/artist_tiles/artist_kachel4.jpg" alt="Artist 2">
+            </a>
+            <a href="javascript:void(0);" class="artists-grid-item" data-artist-id="artist3">
+                <img src="assets/images/artist_tiles/artist_kachel4.jpg" alt="Artist 3">
+            </a>
+            <a href="javascript:void(0);" class="artists-grid-item" data-artist-id="artist4">
+                <img src="assets/images/artist_tiles/artist_kachel4.jpg" alt="Artist 4">
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <div id="artistModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">×</span>
-            <div class="modal-header">
-                <img src="" alt="" id="modal-image">
-                <h2 id="modal-artist-name"></h2>
-            </div>
-            <div class="modal-body">
-                <p id="modal-bio"></p>
-                <div class="social-links">
-                    <a href="#" target="_blank" id="facebook-link"><i class="fab fa-facebook"></i></a>
-                    <a href="#" target="_blank" id="instagram-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank" id="spotify-link"><i class="fab fa-spotify"></i></a>
-                    <a href="#" target="_blank" id="website-link"><i class="fas fa-globe"></i></a>
-                </div>
+<div id="artistModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-header">
+            <img src="" alt="" id="modal-image">
+            <h2 id="modal-artist-name"></h2>
+        </div>
+        <div class="modal-body">
+            <p id="modal-bio"></p>
+            <div class="social-links">
+                <a href="#" target="_blank" id="facebook-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank" id="instagram-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" id="spotify-link"><i class="fab fa-spotify"></i></a>
+                <a href="#" target="_blank" id="website-link"><i class="fas fa-globe"></i></a>
             </div>
         </div>
     </div>
-
+</div>
     <div class="parallax-container" id="parallax3">
         <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-23.jpeg');"></div>
     </div>
