@@ -39,7 +39,12 @@
     }
     ?>
 </div>
-
+    <div class="gallery-modal">
+    <div class="gallery-modal-content">
+        <span class="gallery-close-button">&times;</span>
+        <img class="gallery-modal-image" src="" alt="">
+    </div>
+</div>
     <script src="gallery.js"></script>
 </main>
 <div id="footer"></div>
