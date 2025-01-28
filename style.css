@@ -444,22 +444,59 @@ textarea {
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
+        background-color: #ebeb9f;  /* Changed from white/default */
     }
 
     .gallery-section {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        border: 1px solid #3B5F30;
+        border-radius: 8px;
+        background-color: #ebeb9f;  /* Changed from white/default */
     }
 
-    .gallery-section h2 {
-        margin-bottom: 20px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid #eee;
+    .folder-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: #ebeb9f;  /* Changed from #f8f8f8 */
+        border-radius: 8px 8px 0 0;
+        cursor: pointer;
+    }
+
+    .folder-header h2 {
+        margin: 0;
+        font-size: 1.2rem;
+    }
+
+    .toggle-btn {
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 5px;
+        color: #666;
+        transition: transform 0.3s ease;
+    }
+
+    .toggle-btn[aria-expanded="true"] .icon {
+        transform: rotate(180deg);
+        display: inline-block;
     }
 
     .image-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 20px;
+        padding: 20px;
+        transition: max-height 0.3s ease-out;
+        overflow: hidden;
+        background-color: #ebeb9f;  /* Changed from white/default */
+    }
+
+    .image-grid.collapsed {
+        max-height: 0;
+        padding: 0 20px;
     }
 
     .image-item {
@@ -467,6 +504,7 @@ textarea {
         overflow: hidden;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #ebeb9f;  /* Changed from white/default */
     }
 
     .image-item img {
@@ -478,6 +516,17 @@ textarea {
 
     .image-item:hover img {
         transform: scale(1.05);
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
     }
 /* --- Mobile Styles --- */
 @media (max-width: 768px) {

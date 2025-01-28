@@ -2,10 +2,13 @@
 <?php include 'header.php'; ?>
 <div id="header"></div>
 <main id="main-content">
-<div class="gallery-container">
+    <div class="gallery-container">
     <?php
     $galleryPath = 'assets/images/gallery';
     $subfolders = array_filter(glob($galleryPath . '/*'), 'is_dir');
+
+    // Sort subfolders in reverse order (newest first)
+    rsort($subfolders);
 
     foreach ($subfolders as $subfolder) {
         $folderName = basename($subfolder);
@@ -13,9 +16,15 @@
 
         if (!empty($images)) {
             echo "<section class='gallery-section'>";
+            echo "<div class='folder-header'>";
             echo "<h2>" . htmlspecialchars($folderName) . "</h2>";
-            echo "<div class='image-grid'>";
+            echo "<button class='toggle-btn' aria-expanded='false'>
+                    <span class='icon'>▼</span>
+                    <span class='sr-only'>Toggle folder</span>
+                  </button>";
+            echo "</div>";
 
+            echo "<div class='image-grid collapsed'>";
             foreach ($images as $image) {
                 $imageName = basename($image);
                 echo "<div class='image-item'>";
@@ -24,13 +33,14 @@
                           loading='lazy'>";
                 echo "</div>";
             }
-
             echo "</div>";
             echo "</section>";
         }
     }
     ?>
 </div>
+
+    <script src="gallery.js"></script>
 </main>
 <div id="footer"></div>
 <?php include 'footer.php'; ?>
