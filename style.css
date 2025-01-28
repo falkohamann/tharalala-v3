@@ -440,7 +440,45 @@ textarea {
 textarea {
   resize: vertical;
 }
+.gallery-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
+    .gallery-section {
+        margin-bottom: 40px;
+    }
+
+    .gallery-section h2 {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eee;
+    }
+
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .image-item {
+        aspect-ratio: 1;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .image-item:hover img {
+        transform: scale(1.05);
+    }
 /* --- Mobile Styles --- */
 @media (max-width: 768px) {
   /* Welcome banner styles */
