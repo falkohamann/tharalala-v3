@@ -583,9 +583,55 @@ textarea {
     background-color: #31572c;
     transform: scale(1.1);
 }
+.gallery-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ecf39e;
+    color: #31572c;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.gallery-prev {
+    left: 20px;
+}
+
+.gallery-next {
+    right: 20px;
+}
+
+.gallery-nav-btn:hover {
+    background-color: #31572c;
+    color: #ecf39e;
+    transform: translateY(-50%) scale(1.1);
+}
 
 /* --- Mobile Styles --- */
 @media (max-width: 768px) {
+.gallery-nav-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .gallery-prev {
+        left: 10px;
+    }
+
+    .gallery-next {
+        right: 10px;
+    }
+
 .image-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
         gap: 10px;

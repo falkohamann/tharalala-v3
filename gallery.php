@@ -38,6 +38,15 @@
         }
     }
     ?>
+
+<div class="gallery-modal">
+    <div class="gallery-modal-content">
+        <span class="gallery-close-button">&times;</span>
+        <button class="gallery-nav-btn gallery-prev">&lt;</button>
+        <img class="gallery-modal-image" src="" alt="">
+        <button class="gallery-nav-btn gallery-next">&gt;</button>
+    </div>
+</div>
 </div>
     <div class="gallery-modal">
     <div class="gallery-modal-content">
