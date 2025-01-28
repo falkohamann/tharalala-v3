@@ -12,7 +12,7 @@
 
     foreach ($subfolders as $subfolder) {
         $folderName = basename($subfolder);
-        $images = glob($subfolder . '/*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+        $images = glob($subfolder . '/*.{webp}', GLOB_BRACE);
 
         if (!empty($images)) {
             echo "<section class='gallery-section'>";
