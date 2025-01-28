@@ -187,13 +187,6 @@
     </div>
 </div>
 </div>
-    <div class="gallery-modal">
-    <div class="gallery-modal-content">
-        <span class="gallery-close-button">&times;</span>
-        <img class="gallery-modal-image" src="" alt="">
-    </div>
-</div>
-        </div>
     </section>
 
     <div class="parallax-container" id="parallax5">

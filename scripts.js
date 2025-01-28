@@ -1,40 +1,141 @@
-/*script.js*/
 document.addEventListener('DOMContentLoaded', function() {
-    const folderHeaders = document.querySelectorAll('.folder-header');
+    // --- Mobile Menu Functionality ---
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navLinks = document.getElementById('nav-links');
 
-    folderHeaders.forEach(header => {
-        header.addEventListener('click', function() {
-            const imageGrid = this.nextElementSibling;
-            const toggleBtn = this.querySelector('.toggle-btn');
-            const icon = toggleBtn.querySelector('.icon');
+    if (hamburgerMenu && navLinks) {
+        hamburgerMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('open');
+            navLinks.classList.toggle('show');
+        });
 
-            // Toggle the collapsed state
-            const isCurrentlyCollapsed = imageGrid.classList.contains('collapsed');
+        const menuLinks = navLinks.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburgerMenu.classList.remove('open');
+                navLinks.classList.remove('show');
+            });
+        });
 
-            // Update button state
-            toggleBtn.setAttribute('aria-expanded', isCurrentlyCollapsed);
-            icon.textContent = isCurrentlyCollapsed ? '▲' : '▼';
-            toggleBtn.setAttribute('aria-label',
-                isCurrentlyCollapsed ? 'Close folder' : 'Open folder');
-
-            // Toggle the collapsed class
-            imageGrid.classList.toggle('collapsed');
-
-            // Set max-height based on new state
-            if (!isCurrentlyCollapsed) {
-                imageGrid.style.maxHeight = '0px';
-            } else {
-                imageGrid.style.maxHeight = imageGrid.scrollHeight + 'px';
+        document.addEventListener('click', function(event) {
+            if (!hamburgerMenu.contains(event.target) && !navLinks.contains(event.target)) {
+                hamburgerMenu.classList.remove('open');
+                navLinks.classList.remove('show');
             }
         });
-    });
-});
+    }
 
-    // --- New Artist Modal Functionality ---
+    // --- Folder and Gallery Functionality ---
+    const folderHeaders = document.querySelectorAll('.folder-header');
+    const galleryModal = document.querySelector('.gallery-modal');
+    const galleryModalImg = document.querySelector('.gallery-modal-image');
+    const galleryCloseButton = document.querySelector('.gallery-close-button');
+    const galleryPrevButton = document.querySelector('.gallery-prev');
+    const galleryNextButton = document.querySelector('.gallery-next');
+    const galleryImages = document.querySelectorAll('.image-item img');
+    let currentImageIndex = 0;
+
+    // Folder toggle functionality
+    folderHeaders.forEach(header => {
+        const toggleBtn = header.querySelector('.toggle-btn');
+
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const imageGrid = header.nextElementSibling;
+                const icon = this.querySelector('.icon');
+
+                const isCurrentlyCollapsed = imageGrid.classList.contains('collapsed');
+
+                if (isCurrentlyCollapsed) {
+                    imageGrid.style.maxHeight = imageGrid.scrollHeight + 'px';
+                } else {
+                    imageGrid.style.maxHeight = '0px';
+                }
+
+                imageGrid.classList.toggle('collapsed');
+                this.setAttribute('aria-expanded', !isCurrentlyCollapsed);
+                icon.textContent = isCurrentlyCollapsed ? '▲' : '▼';
+            });
+        }
+    });
+
+    // Gallery modal functionality
+    function showImage(index) {
+        currentImageIndex = index;
+        galleryModalImg.src = galleryImages[index].src;
+        galleryModalImg.alt = galleryImages[index].alt;
+    }
+
+    function showNext(e) {
+        e?.stopPropagation();
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+        showImage(currentImageIndex);
+    }
+
+    function showPrev(e) {
+        e?.stopPropagation();
+        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+        showImage(currentImageIndex);
+    }
+
+    // Add click handlers to all gallery images
+    galleryImages.forEach((img, index) => {
+        img.addEventListener('click', function(e) {
+            e.stopPropagation();
+            galleryModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            showImage(index);
+        });
+    });
+
+    // Navigation buttons
+    if (galleryPrevButton) {
+        galleryPrevButton.addEventListener('click', showPrev);
+    }
+
+    if (galleryNextButton) {
+        galleryNextButton.addEventListener('click', showNext);
+    }
+
+    // Close button and click outside
+    function closeGalleryModal() {
+        galleryModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    if (galleryCloseButton) {
+        galleryCloseButton.addEventListener('click', function(e) {
+            e.stopPropagation();
+            closeGalleryModal();
+        });
+    }
+
+    galleryModal.addEventListener('click', function(e) {
+        if (e.target === galleryModal) {
+            closeGalleryModal();
+        }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (galleryModal.style.display === 'block') {
+            if (e.key === 'ArrowRight') {
+                showNext(e);
+            } else if (e.key === 'ArrowLeft') {
+                showPrev(e);
+            } else if (e.key === 'Escape') {
+                closeGalleryModal();
+            }
+        }
+    });
+
+    // --- Artist Modal Functionality ---
     const artistData = {
         artist1: {
             name: "Artist One",
-            bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id aliquam ultricies, nunc nisl tincidunt nunc, vitae lacinia nisl nisl vitae nisl.",
+            bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             image: "assets/images/artist_tiles/artist_kachel4.jpg",
             facebook: "#",
             instagram: "#",
@@ -68,121 +169,54 @@ document.addEventListener('DOMContentLoaded', function() {
             spotify: "#",
             website: "#"
         }
-        // ... add more artists if needed
     };
 
-    const artistModal = document.getElementById('artistModal'); // Get the artist modal element
-    const modalImage = document.getElementById('modal-image');
-    const modalArtistName = document.getElementById('modal-artist-name');
-    const modalBio = document.getElementById('modal-bio');
-    const facebookLink = document.getElementById('facebook-link');
-    const instagramLink = document.getElementById('instagram-link');
-    const spotifyLink = document.getElementById('spotify-link');
-    const websiteLink = document.getElementById('website-link');
-    const artistCloseButton = artistModal.querySelector('.close-button'); // Get the close button of the artist modal
+    const artistModal = document.getElementById('artistModal');
+    if (artistModal) {
+        const modalImage = document.getElementById('modal-image');
+        const modalArtistName = document.getElementById('modal-artist-name');
+        const modalBio = document.getElementById('modal-bio');
+        const facebookLink = document.getElementById('facebook-link');
+        const instagramLink = document.getElementById('instagram-link');
+        const spotifyLink = document.getElementById('spotify-link');
+        const websiteLink = document.getElementById('website-link');
+        const artistCloseButton = artistModal.querySelector('.close-button');
 
-    function openModal(element) {
-        const artistId = element.dataset.artistId;
-        const artist = artistData[artistId];
+        function openArtistModal(element) {
+            const artistId = element.dataset.artistId;
+            const artist = artistData[artistId];
 
-        modalImage.src = artist.image;
-        modalImage.alt = artist.name;
-        modalArtistName.textContent = artist.name;
-        modalBio.textContent = artist.bio;
-        facebookLink.href = artist.facebook;
-        instagramLink.href = artist.instagram;
-        spotifyLink.href = artist.spotify;
-        websiteLink.href = artist.website;
-
-        artistModal.style.display = 'block'; // Show the artist modal
-    }
-
-    const artistGridItems = document.querySelectorAll('.artists-grid-item');
-    artistGridItems.forEach(item => {
-        item.addEventListener('click', function() {
-            openModal(this);
-        });
-    });
-
-    artistCloseButton.addEventListener('click', function() {
-        artistModal.style.display = 'none'; // Hide the artist modal
-    });
-
-    artistModal.addEventListener('click', function(event) {
-        if (event.target === artistModal) {
-            artistModal.style.display = 'none'; // Hide the artist modal
-        }
-    });
-
-    // --- Existing Gallery Modal Functionality ---
-    const galleryModal = document.querySelector('.gallery-modal'); // Use a different variable name for the gallery modal
-    const galleryModalImg = document.querySelector('.gallery-modal-image');
-    const galleryCloseButton = document.querySelector('.gallery-close-button'); // Use a different variable name
-    const galleryPrevButton = document.querySelector('.gallery-prev'); // Use a different variable name
-    const galleryNextButton = document.querySelector('.gallery-next'); // Use a different variable name
-    const galleryImages = document.querySelectorAll('.image-item img');
-    let currentImageIndex = 0;
-
-    function showImage(index) {
-        currentImageIndex = index;
-        galleryModalImg.src = galleryImages[index].src;
-        galleryModalImg.alt = galleryImages[index].alt;
-    }
-
-    function showNext() {
-        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-        showImage(currentImageIndex);
-    }
-
-    function showPrev() {
-        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-        showImage(currentImageIndex);
-    }
-
-    // Open modal when clicking on an image
-    galleryImages.forEach((img, index) => {
-        img.addEventListener('click', function() {
-            galleryModal.style.display = 'block';
-            showImage(index);
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-    // Navigation button click handlers
-    galleryNextButton.addEventListener('click', (e) => {
-        e.stopPropagation();
-        showNext();
-    });
-
-    galleryPrevButton.addEventListener('click', (e) => {
-        e.stopPropagation();
-        showPrev();
-    });
-
-    // Keyboard navigation
-    document.addEventListener('keydown', function(event) {
-        if (galleryModal.style.display === 'block') {
-            if (event.key === 'ArrowRight') {
-                showNext();
-            } else if (event.key === 'ArrowLeft') {
-                showPrev();
-            } else if (event.key === 'Escape') {
-                galleryModal.style.display = 'none';
-                document.body.style.overflow = 'auto';
+            if (modalImage) {
+                modalImage.src = artist.image;
+                modalImage.alt = artist.name;
             }
-        }
-    });
+            if (modalArtistName) modalArtistName.textContent = artist.name;
+            if (modalBio) modalBio.textContent = artist.bio;
+            if (facebookLink) facebookLink.href = artist.facebook;
+            if (instagramLink) instagramLink.href = artist.instagram;
+            if (spotifyLink) spotifyLink.href = artist.spotify;
+            if (websiteLink) websiteLink.href = artist.website;
 
-    // Existing close functionality
-    galleryCloseButton.addEventListener('click', function() {
-        galleryModal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    });
-
-    galleryModal.addEventListener('click', function(event) {
-        if (event.target === galleryModal) {
-            galleryModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
+            artistModal.style.display = 'block';
         }
-    });
+
+        const artistGridItems = document.querySelectorAll('.artists-grid-item');
+        artistGridItems.forEach(item => {
+            item.addEventListener('click', function() {
+                openArtistModal(this);
+            });
+        });
+
+        if (artistCloseButton) {
+            artistCloseButton.addEventListener('click', function() {
+                artistModal.style.display = 'none';
+            });
+        }
+
+        artistModal.addEventListener('click', function(event) {
+            if (event.target === artistModal) {
+                artistModal.style.display = 'none';
+            }
+        });
+    }
 });
