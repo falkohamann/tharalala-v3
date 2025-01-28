@@ -586,6 +586,23 @@ textarea {
 
 /* --- Mobile Styles --- */
 @media (max-width: 768px) {
+.image-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
+        gap: 10px;
+    }
+
+    .image-item {
+        aspect-ratio: 1;
+        width: 100%;
+    }
+
+    .gallery-container {
+        padding: 10px;
+    }
+
+    .gallery-section {
+        margin-bottom: 10px;
+    }
 .gallery-modal-content {
         width: 95%;
     }
