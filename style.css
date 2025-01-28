@@ -247,13 +247,13 @@ h2 {
 }
 
 /* --- Artist Section --- */
-.gallery {
+.artists-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
 }
 
-.gallery-item {
+.artists-grid-item {
   position: relative;
   overflow: hidden;
   border-radius: 5px;
@@ -261,14 +261,14 @@ h2 {
   background-color: #fff;
 }
 
-.gallery-item img {
+.artists-grid-item img {
   width: 100%;
   height: auto;
   display: block;
   transition: transform 0.3s ease;
 }
 
-.gallery-item:hover img {
+.artists-grid-item:hover img {
   transform: scale(1.1);
 }
 

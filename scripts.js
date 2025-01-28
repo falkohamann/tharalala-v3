@@ -1,22 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Load header content FIRST
-    fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header').innerHTML = data;
-            // Set up mobile menu AFTER header is loaded
-            setupMobileMenu();
-            // Set up smooth scrolling AFTER header is loaded
-            setupSmoothScrolling();
-        });
-
-    // Load footer content
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-        });
-
     // Function to set up mobile menu
     function setupMobileMenu() {
         const hamburgerMenu = document.getElementById('hamburger-menu');
@@ -30,16 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             // Handle clicks on the links
-            const links = navLinks.querySelectorAll('a');
-            links.forEach(link => {
+            navLinks.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', function(e) {
-                    e.preventDefault(); // Prevent default action
-
-                    // Close the mobile menu
+                    e.preventDefault();
                     navLinks.classList.remove('show');
                     hamburgerMenu.classList.remove('open');
 
-                    // Get the target section and scroll to it
                     const targetId = this.getAttribute('href');
                     const targetSection = document.querySelector(targetId);
                     if (targetSection) {
@@ -50,12 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
 
-            // Prevent clicks within navLinks from closing the menu immediately
             navLinks.addEventListener('click', function(event) {
                 event.stopPropagation();
             });
 
-            // Close the menu when clicking outside of it
             document.addEventListener('click', function(event) {
                 if (!navLinks.contains(event.target) && !hamburgerMenu.contains(event.target)) {
                     navLinks.classList.remove('show');
@@ -65,12 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Function to set up smooth scrolling for non-navigation links
+    // Function to set up smooth scrolling
     function setupSmoothScrolling() {
         document.querySelectorAll('a[href^="#"]:not(#nav-links a)').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({
@@ -81,15 +56,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- Artist Modal Functionality ---
+    // Artist Modal Setup
     const artistModal = document.getElementById('artistModal');
     const closeButton = document.querySelector('.close-button');
 
-    // Sample artist data (replace with your actual data)
+    // Artist data
     const artistData = {
         artist1: {
             name: "Artist 1",
             bio: "Bio text for Artist 1",
+            image: "assets/images/artist_tiles/artist_kachel4.jpg",
             facebook: "https://facebook.com/artist1",
             instagram: "https://instagram.com/artist1",
             spotify: "https://open.spotify.com/artist/artist1",
@@ -98,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         artist2: {
             name: "Artist 2",
             bio: "Bio text for Artist 2",
+            image: "assets/images/artist_tiles/artist_kachel4.jpg",
             facebook: "https://facebook.com/artist2",
             instagram: "https://instagram.com/artist2",
             spotify: "https://open.spotify.com/artist/artist2",
@@ -106,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         artist3: {
             name: "Artist 3",
             bio: "Bio text for Artist 3",
+            image: "assets/images/artist_tiles/artist_kachel4.jpg",
             facebook: "https://facebook.com/artist3",
             instagram: "https://instagram.com/artist3",
             spotify: "https://open.spotify.com/artist/artist3",
@@ -114,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         artist4: {
             name: "Artist 4",
             bio: "Bio text for Artist 4",
+            image: "assets/images/artist_tiles/artist_kachel4.jpg",
             facebook: "https://facebook.com/artist4",
             instagram: "https://instagram.com/artist4",
             spotify: "https://open.spotify.com/artist/artist4",
@@ -126,16 +105,28 @@ document.addEventListener('DOMContentLoaded', function() {
         const artistId = element.getAttribute('data-artist-id');
         const artist = artistData[artistId];
 
-        if (artist) {
+        if (artist && artistModal) {
+            // Set modal content
             document.getElementById('modal-artist-name').textContent = artist.name;
             document.getElementById('modal-bio').textContent = artist.bio;
-            document.getElementById('modal-image').src = element.querySelector('img').src;
+            
+            // Set modal image
+            const modalImage = document.getElementById('modal-image');
+            if (modalImage) {
+                modalImage.src = artist.image;
+                modalImage.alt = artist.name;
+            }
+
+            // Set social links
             document.getElementById('facebook-link').href = artist.facebook;
             document.getElementById('instagram-link').href = artist.instagram;
             document.getElementById('spotify-link').href = artist.spotify;
             document.getElementById('website-link').href = artist.website;
 
+            // Display modal
             artistModal.style.display = 'block';
+        } else {
+            console.error('Modal elements not found or artist data missing');
         }
     }
 
@@ -151,4 +142,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
     }
+
+    // Initialize everything
+    setupMobileMenu();
+    setupSmoothScrolling();
 });
