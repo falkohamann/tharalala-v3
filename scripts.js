@@ -1,19 +1,34 @@
-/*script.js*/document.addEventListener('DOMContentLoaded', function() {
-    // --- Existing Functionality (Folder Toggle) ---
+/*script.js*/
+document.addEventListener('DOMContentLoaded', function() {
     const folderHeaders = document.querySelectorAll('.folder-header');
 
     folderHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const folder = header.parentElement;
-            const imageGrid = folder.querySelector('.image-grid');
-            const toggleBtn = header.querySelector('.toggle-btn');
+        header.addEventListener('click', function() {
+            const imageGrid = this.nextElementSibling;
+            const toggleBtn = this.querySelector('.toggle-btn');
+            const icon = toggleBtn.querySelector('.icon');
 
+            // Toggle the collapsed state
+            const isCurrentlyCollapsed = imageGrid.classList.contains('collapsed');
+
+            // Update button state
+            toggleBtn.setAttribute('aria-expanded', isCurrentlyCollapsed);
+            icon.textContent = isCurrentlyCollapsed ? '▲' : '▼';
+            toggleBtn.setAttribute('aria-label',
+                isCurrentlyCollapsed ? 'Close folder' : 'Open folder');
+
+            // Toggle the collapsed class
             imageGrid.classList.toggle('collapsed');
-            const isCollapsed = imageGrid.classList.contains('collapsed');
-            toggleBtn.setAttribute('aria-expanded', !isCollapsed);
-            toggleBtn.setAttribute('aria-label', isCollapsed ? 'Open folder' : 'Close folder');
+
+            // Set max-height based on new state
+            if (!isCurrentlyCollapsed) {
+                imageGrid.style.maxHeight = '0px';
+            } else {
+                imageGrid.style.maxHeight = imageGrid.scrollHeight + 'px';
+            }
         });
     });
+});
 
     // --- New Artist Modal Functionality ---
     const artistData = {

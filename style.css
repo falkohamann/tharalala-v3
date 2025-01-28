@@ -469,6 +469,13 @@ textarea {
         margin: 0;
         font-size: 1.2rem;
     }
+    .folder-content {
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+}
+.collapsed {
+    max-height: 0;
+}
 
     .toggle-btn {
         background: none;
