@@ -2,13 +2,16 @@
 <div id="header"></div>
 <main id="main-content">
     <section id="welcome-banner">
-        <img src="assets/images/header-vol3.png" alt="Willkommen beim Tharalala Musik Festival!">
-    </section>
-
+    <div class="moving-text-container">
+        <span class="moving-text line1">Willkommen zum Tharalala!</span>
+        <span class="moving-text line2">22.08. - 24.08. 2025</span>
+        <span class="moving-text line3">Kuppelhalle Tharandt</span>
+    </div>
+    <img src="assets/images/header-vol3.png" alt="Willkommen beim Tharalala Musik Festival!">
+</section>
     <div class="parallax-container" id="parallax1">
         <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-21.jpeg');"></div>
     </div>
-
     <section id="program">
         <div class="container">
             <img src="assets/images/program.png" alt="Programm">

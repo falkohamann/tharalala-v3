@@ -156,6 +156,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 #welcome-banner img {
@@ -163,8 +164,63 @@ section {
   height: auto;
   display: block;
   margin: 0 auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  z-index: 1;
+}
+
+.moving-text-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Place the text container behind the image */
+}
+
+.moving-text {
+    position: absolute;
+    white-space: nowrap;
+    font-weight: bolder;
+    color: #ecf39e;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Or use a font closer to the image */
+}
+
+.line1 {
+    font-size: 250px;
+    top: 1%; /* Adjust position as needed */
+    right: 0;
+    animation: moveRightToLeft 68s linear infinite;
+}
+
+.line2 {
+    font-size: 275px;
+    top: 61%; /* Adjust position as needed */
+    right: 0;
+    animation: moveRightToLeft 77s linear infinite;
+}
+
+.line3 {
+    font-size: 325px;
+    top: 25%; /* Adjust position as needed */
+    left: 0;
+    animation: moveLeftToRight 68s linear infinite;
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .map-container {
@@ -631,6 +687,27 @@ textarea {
 
 /* --- Mobile Styles --- */
 @media (max-width: 768px) {
+.line1 {
+        font-size: 90px;
+        top: 2%; /* Adjust position as needed */
+        left: 0;
+        animation: moveLeftToRight 70s linear infinite;
+    }
+
+    .line2 {
+        font-size: 80px;
+        top: 60%; /* Adjust position as needed */
+        right: 0;
+        animation: moveRightToLeft 70s linear infinite;
+    }
+
+    .line3 {
+        font-size: 50px;
+        top: 82%; /* Adjust position as needed */
+        left: 0;
+        animation: moveLeftToRight 70s linear infinite;
+    }
+
 .gallery-nav-btn {
         width: 30px;
         height: 30px;
