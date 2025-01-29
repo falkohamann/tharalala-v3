@@ -188,21 +188,21 @@ section {
     font-size: 250px;
     top: 1%; /* Adjust position as needed */
     right: 0;
-    animation: moveRightToLeft 90s linear infinite;
+    animation: moveRightToLeft 68s linear infinite;
 }
 
 .line2 {
     font-size: 275px;
     top: 61%; /* Adjust position as needed */
     right: 0;
-    animation: moveRightToLeft 90s linear infinite;
+    animation: moveRightToLeft 77s linear infinite;
 }
 
 .line3 {
     font-size: 325px;
     top: 25%; /* Adjust position as needed */
     left: 0;
-    animation: moveLeftToRight 90s linear infinite;
+    animation: moveLeftToRight 68s linear infinite;
 }
 
 @keyframes moveLeftToRight {
