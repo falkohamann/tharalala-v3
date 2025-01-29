@@ -1,3 +1,4 @@
+<!-- style.css -->
 /* --- Variables --- */
 :root {
   --primary-color: #4f772d;
@@ -26,7 +27,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin-top: 60px;
   position: relative;
 }
 
@@ -688,8 +688,8 @@ textarea {
 /* --- Mobile Styles --- */
 @media (max-width: 768px) {
 .line1 {
-        font-size: 90px;
-        top: 2%; /* Adjust position as needed */
+        font-size: 45px;
+        top: 17%; /* Adjust position as needed */
         left: 0;
         animation: moveLeftToRight 70s linear infinite;
     }

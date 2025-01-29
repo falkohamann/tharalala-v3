@@ -1,3 +1,4 @@
+<!-- index.php -->
 <?php include 'header.php'; ?>
 <div id="header"></div>
 <main id="main-content">
