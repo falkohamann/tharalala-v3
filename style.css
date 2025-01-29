@@ -192,8 +192,8 @@ section {
 }
 
 .line2 {
-    font-size: 275px;
-    top: 61%; /* Adjust position as needed */
+    font-size: 260px;
+    top: 63%; /* Adjust position as needed */
     right: 0;
     animation: moveRightToLeft 77s linear infinite;
 }
