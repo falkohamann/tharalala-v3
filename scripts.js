@@ -1,222 +1,207 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // --- Mobile Menu Functionality ---
-    const hamburgerMenu = document.getElementById('hamburger-menu');
-    const navLinks = document.getElementById('nav-links');
+/* ===== CSS Optimization ===== */
+/* --- Enhanced Variables --- */
+:root {
+  --primary-color: #4f772d;
+  --secondary-color: #90a955;
+  --background-color: var(--secondary-color); /* Reuse existing variable */
+  --text-color: #ecf39e;
+  --accent-color: #31572c;
+  --font-family: 'Arial', sans-serif;
+  --header-bg: rgba(49, 87, 44, 0.9); /* Calculated from original #31572CE6 */
+  --modal-zindex: 1000;
+  --header-zindex: 1010;
+  --gallery-modal-zindex: 1020;
+  --container-width: min(90%, 1200px);
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
 
-    if (hamburgerMenu && navLinks) {
-        hamburgerMenu.addEventListener('click', function(e) {
-            e.stopPropagation();
-            this.classList.toggle('open');
-            navLinks.classList.toggle('show');
-        });
+/* --- Base Reset & Global Styles --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        const menuLinks = navLinks.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                hamburgerMenu.classList.remove('open');
-                navLinks.classList.remove('show');
-            });
-        });
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for fixed header */
+}
 
-        document.addEventListener('click', function(event) {
-            if (!hamburgerMenu.contains(event.target) && !navLinks.contains(event.target)) {
-                hamburgerMenu.classList.remove('open');
-                navLinks.classList.remove('show');
-            }
-        });
-    }
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 60px;
+}
 
-    // --- Folder and Gallery Functionality ---
-    const folderHeaders = document.querySelectorAll('.folder-header');
-    const galleryModal = document.querySelector('.gallery-modal');
-    const galleryModalImg = document.querySelector('.gallery-modal-image');
-    const galleryCloseButton = document.querySelector('.gallery-close-button');
-    const galleryPrevButton = document.querySelector('.gallery-prev');
-    const galleryNextButton = document.querySelector('.gallery-next');
-    const galleryImages = document.querySelectorAll('.image-item img');
-    let currentImageIndex = 0;
+/* --- Layout Components --- */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-    // Folder toggle functionality
-    folderHeaders.forEach(header => {
-        const toggleBtn = header.querySelector('.toggle-btn');
+/* --- Header & Navigation --- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--header-bg);
+  padding: 0.5rem 0;
+  z-index: var(--header-zindex);
+}
 
-        if (toggleBtn) {
-            toggleBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const imageGrid = header.nextElementSibling;
-                const icon = this.querySelector('.icon');
+nav {
+  margin-left: auto;
+}
 
-                const isCurrentlyCollapsed = imageGrid.classList.contains('collapsed');
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
 
-                if (isCurrentlyCollapsed) {
-                    imageGrid.style.maxHeight = imageGrid.scrollHeight + 'px';
-                } else {
-                    imageGrid.style.maxHeight = '0px';
-                }
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color var(--transition-fast);
+}
 
-                imageGrid.classList.toggle('collapsed');
-                this.setAttribute('aria-expanded', !isCurrentlyCollapsed);
-                icon.textContent = isCurrentlyCollapsed ? '▲' : '▼';
-            });
-        }
-    });
+.nav-link:hover {
+  color: var(--secondary-color);
+}
 
-    // Gallery modal functionality
-    function showImage(index) {
-        currentImageIndex = index;
-        galleryModalImg.src = galleryImages[index].src;
-        galleryModalImg.alt = galleryImages[index].alt;
-    }
+/* --- Responsive Mobile Menu --- */
+#hamburger-menu {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
 
-    function showNext(e) {
-        e?.stopPropagation();
-        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-        showImage(currentImageIndex);
-    }
+.hamburger-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  margin: 5px 0;
+  transition: var(--transition-normal);
+}
 
-    function showPrev(e) {
-        e?.stopPropagation();
-        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-        showImage(currentImageIndex);
-    }
+/* --- Sections & Content Blocks --- */
+section {
+  padding: 4rem 0;
+  position: relative;
+}
 
-    // Add click handlers to all gallery images
-    galleryImages.forEach((img, index) => {
-        img.addEventListener('click', function(e) {
-            e.stopPropagation();
-            galleryModal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-            showImage(index);
-        });
-    });
+/* --- Gallery Improvements --- */
+.gallery-container {
+  background-color: var(--text-color);
+  padding: 2rem 0;
+}
 
-    // Navigation buttons
-    if (galleryPrevButton) {
-        galleryPrevButton.addEventListener('click', showPrev);
-    }
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
 
-    if (galleryNextButton) {
-        galleryNextButton.addEventListener('click', showNext);
-    }
+.image-item {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform var(--transition-normal);
+}
 
-    // Close button and click outside
-    function closeGalleryModal() {
-        galleryModal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
+.image-item:hover {
+  transform: translateY(-5px);
+}
 
-    if (galleryCloseButton) {
-        galleryCloseButton.addEventListener('click', function(e) {
-            e.stopPropagation();
-            closeGalleryModal();
-        });
-    }
+/* --- Modal Enhancements --- */
+.gallery-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: var(--gallery-modal-zindex);
+}
 
-    galleryModal.addEventListener('click', function(e) {
-        if (e.target === galleryModal) {
-            closeGalleryModal();
-        }
-    });
+.gallery-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
 
-    // Keyboard navigation
-    document.addEventListener('keydown', function(e) {
-        if (galleryModal.style.display === 'block') {
-            if (e.key === 'ArrowRight') {
-                showNext(e);
-            } else if (e.key === 'ArrowLeft') {
-                showPrev(e);
-            } else if (e.key === 'Escape') {
-                closeGalleryModal();
-            }
-        }
-    });
+/* --- Form Optimization --- */
+input, textarea, button {
+  font-family: inherit;
+  font-size: inherit;
+}
 
-    // --- Artist Modal Functionality ---
-    const artistData = {
-        artist1: {
-            name: "Artist One",
-            bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            image: "assets/images/artist_tiles/artist_kachel4.jpg",
-            facebook: "#",
-            instagram: "#",
-            spotify: "#",
-            website: "#"
-        },
-        artist2: {
-            name: "Artist Two",
-            bio: "Bio for Artist Two...",
-            image: "assets/images/artist_tiles/artist_kachel4.jpg",
-            facebook: "#",
-            instagram: "#",
-            spotify: "#",
-            website: "#"
-        },
-        artist3: {
-            name: "Artist Three",
-            bio: "Bio for Artist Three...",
-            image: "assets/images/artist_tiles/artist_kachel4.jpg",
-            facebook: "#",
-            instagram: "#",
-            spotify: "#",
-            website: "#"
-        },
-        artist4: {
-            name: "Artist Four",
-            bio: "Bio for Artist Four...",
-            image: "assets/images/artist_tiles/artist_kachel4.jpg",
-            facebook: "#",
-            instagram: "#",
-            spotify: "#",
-            website: "#"
-        }
-    };
+/* --- Performance Improvements --- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  .image-item,
+  .image-item img {
+    transition: none !important;
+  }
+}
 
-    const artistModal = document.getElementById('artistModal');
-    if (artistModal) {
-        const modalImage = document.getElementById('modal-image');
-        const modalArtistName = document.getElementById('modal-artist-name');
-        const modalBio = document.getElementById('modal-bio');
-        const facebookLink = document.getElementById('facebook-link');
-        const instagramLink = document.getElementById('instagram-link');
-        const spotifyLink = document.getElementById('spotify-link');
-        const websiteLink = document.getElementById('website-link');
-        const artistCloseButton = artistModal.querySelector('.close-button');
+/* ===== Mobile Responsiveness ===== */
+@media (max-width: 768px) {
+  :root {
+    --container-width: 95%;
+  }
 
-        function openArtistModal(element) {
-            const artistId = element.dataset.artistId;
-            const artist = artistData[artistId];
+  .container {
+    padding: 0 15px;
+  }
 
-            if (modalImage) {
-                modalImage.src = artist.image;
-                modalImage.alt = artist.name;
-            }
-            if (modalArtistName) modalArtistName.textContent = artist.name;
-            if (modalBio) modalBio.textContent = artist.bio;
-            if (facebookLink) facebookLink.href = artist.facebook;
-            if (instagramLink) instagramLink.href = artist.instagram;
-            if (spotifyLink) spotifyLink.href = artist.spotify;
-            if (websiteLink) websiteLink.href = artist.website;
+  #hamburger-menu {
+    display: block;
+  }
 
-            artistModal.style.display = 'block';
-        }
+  .nav-list {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    background: var(--header-bg);
+    display: none;
+    padding: 1rem 0;
+  }
 
-        const artistGridItems = document.querySelectorAll('.artists-grid-item');
-        artistGridItems.forEach(item => {
-            item.addEventListener('click', function() {
-                openArtistModal(this);
-            });
-        });
+  .nav-list.show {
+    display: flex;
+  }
 
-        if (artistCloseButton) {
-            artistCloseButton.addEventListener('click', function() {
-                artistModal.style.display = 'none';
-            });
-        }
+  .nav-list li {
+    padding: 1rem;
+    border-top: 1px solid rgba(236, 243, 158, 0.1);
+  }
 
-        artistModal.addEventListener('click', function(event) {
-            if (event.target === artistModal) {
-                artistModal.style.display = 'none';
-            }
-        });
-    }
-});
+  /* Touch target optimization */
+  .nav-link,
+  .gallery-nav-btn,
+  .gallery-close-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
