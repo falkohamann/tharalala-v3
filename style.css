@@ -723,7 +723,7 @@ textarea {
     }
 
 .image-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
+        grid-template-columns: repeat(auto-fill, minmax(75px, 2fr)) !important;
         gap: 10px;
     }
 
