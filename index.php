@@ -25,10 +25,16 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>18:00 - <a href="#">Band A</a></td>
+                            <td>18:00 - <a href="#">Einlaß</a></td>
                         </tr>
                         <tr>
-                            <td>20:00 - <a href="#">Band D</a></td>
+                            <td>19:00 - <a href="#">Remo</a></td>
+                        </tr>
+                        <tr>
+                            <td>20:30 - <a href="#">Brettel</a></td>
+                        </tr>
+                        <tr>
+                            <td>22:00 - <a href="#">Second Project</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -41,10 +47,25 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>16:00 - <a href="#">Band B</a></td>
+                            <td>16:00 - <a href="#">Einlaß</a></td>
                         </tr>
                         <tr>
-                            <td>18:00 - <a href="#">Band E</a></td>
+                            <td>17:00 - <a href="#">MalKapaun</a></td>
+                        </tr>
+                        <tr>
+                            <td>18:10 - <a href="#">O'Reilly</a></td>
+                        </tr>
+                        <tr>
+                            <td>19:20 - <a href="#">The Perky Pollyvocs</a></td>
+                        </tr>
+                        <tr>
+                            <td>20:30 - <a href="#">Trackstone</a></td>
+                        </tr>
+                        <tr>
+                            <td>21:40 - <a href="#">First Born Unicorn</a></td>
+                        </tr>
+                        <tr>
+                            <td>22:50 - <a href="#">The Freaky Friday Jailhouse Gangn</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -57,7 +78,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>14:00 - <a href="#">Band C</a></td>
+                            <td>11:00 - <a href="#">Band C</a></td>
                         </tr>
                         <tr>
                             <td>16:00 - <a href="#">Band F</a></td>

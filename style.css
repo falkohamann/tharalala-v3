@@ -274,14 +274,17 @@ h2 {
 }
 
 .program-table th, .program-table td {
-  padding: 10px;
+  padding: 12px; /* Slightly increased padding for better readability */
   text-align: center;
   border: 1px solid var(--primary-color);
+  font-size: 1.2rem; /* Increase the font size */
+  font-weight: bold; /* Make text bold */
 }
 
 .program-table th {
   background-color: var(--primary-color);
   color: var(--text-color);
+  font-size: 1.4rem; /* Slightly larger font for table headers */
 }
 
 .program-table td {
@@ -772,6 +775,15 @@ textarea {
   .program-table {
     width: 100%;
     margin-bottom: 20px;
+  }
+  .program-table th, .program-table td {
+    font-size: 1.4rem; /* Increase text size on mobile */
+    font-weight: bold; /* Make text bold */
+    padding: 14px; /* More padding for better touch accessibility */
+  }
+
+  .program-table th {
+    font-size: 1.6rem; /* Even bigger header text for better readability */
   }
 
   /* Navigation and general styles */
