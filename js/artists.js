@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Scripts loaded successfully.");
-
     // --- Mobile Menu Functionality ---
     const hamburgerMenu = document.getElementById("hamburger-menu");
     const navLinks = document.getElementById("nav-links");
@@ -20,6 +18,71 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // --- Gallery Modal Functionality ---
+    const galleryModal = document.querySelector(".gallery-modal");
+    const galleryModalImg = document.querySelector(".gallery-modal-image");
+    const galleryCloseButton = document.querySelector(".gallery-close-button");
+    const galleryPrevButton = document.querySelector(".gallery-prev");
+    const galleryNextButton = document.querySelector(".gallery-next");
+    const galleryImages = document.querySelectorAll(".image-item img");
+    let currentImageIndex = 0;
+
+    function showImage(index) {
+        currentImageIndex = index;
+        galleryModalImg.src = galleryImages[index].src;
+        galleryModalImg.alt = galleryImages[index].alt;
+    }
+
+    function showNext(e) {
+        e?.stopPropagation();
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+        showImage(currentImageIndex);
+    }
+
+    function showPrev(e) {
+        e?.stopPropagation();
+        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+        showImage(currentImageIndex);
+    }
+
+    galleryImages.forEach((img, index) => {
+        img.addEventListener("click", function (e) {
+            e.stopPropagation();
+            galleryModal.style.display = "block";
+            document.body.style.overflow = "hidden";
+            showImage(index);
+        });
+    });
+
+    if (galleryPrevButton) galleryPrevButton.addEventListener("click", showPrev);
+    if (galleryNextButton) galleryNextButton.addEventListener("click", showNext);
+
+    function closeGalleryModal() {
+        galleryModal.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+
+    if (galleryCloseButton) {
+        galleryCloseButton.addEventListener("click", function (e) {
+            e.stopPropagation();
+            closeGalleryModal();
+        });
+    }
+
+    galleryModal.addEventListener("click", function (e) {
+        if (e.target === galleryModal) {
+            closeGalleryModal();
+        }
+    });
+
+    document.addEventListener("keydown", function (e) {
+        if (galleryModal.style.display === "block") {
+            if (e.key === "ArrowRight") showNext(e);
+            else if (e.key === "ArrowLeft") showPrev(e);
+            else if (e.key === "Escape") closeGalleryModal();
+        }
+    });
+
     // --- Artist Modal Functionality ---
     const artistModal = document.getElementById("artistModal");
     const modalImage = document.getElementById("modal-image");
@@ -31,16 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const websiteLink = document.getElementById("website-link");
     const artistCloseButton = artistModal.querySelector(".close-button");
 
-    // Check if modal exists
-    if (!artistModal) {
-        console.error("Artist modal not found in the DOM.");
-        return;
-    }
-
-    // Function to open modal with artist data
     function openArtistModal(artistId) {
-        console.log(`Opening modal for artist: ${artistId}`);
-
         fetch(`data/artists/${artistId}.json`)
             .then((response) => {
                 if (!response.ok) {
@@ -63,24 +117,17 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .catch((error) => {
                 console.error("Error loading artist data:", error);
-                alert("Could not load artist details. Check if the JSON file exists.");
+                alert("Error loading artist details. Please try again later.");
             });
     }
 
-    // **Event Delegation for Artist Clicks**
-    document.body.addEventListener("click", function (event) {
-        const target = event.target.closest(".artists-grid-item");
-        if (target) {
-            const artistId = target.dataset.artistId;
-            if (artistId) {
-                openArtistModal(artistId);
-            } else {
-                console.error("Artist ID not found on clicked element.");
-            }
-        }
+    document.querySelectorAll(".artists-grid-item").forEach((item) => {
+        item.addEventListener("click", function () {
+            const artistId = this.dataset.artistId;
+            openArtistModal(artistId);
+        });
     });
 
-    // Close modal when clicking outside or pressing ESC
     if (artistCloseButton) {
         artistCloseButton.addEventListener("click", function () {
             artistModal.style.display = "none";
@@ -89,12 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     artistModal.addEventListener("click", function (event) {
         if (event.target === artistModal) {
-            artistModal.style.display = "none";
-        }
-    });
-
-    document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape" && artistModal.style.display === "block") {
             artistModal.style.display = "none";
         }
     });

@@ -31,7 +31,7 @@
                             <td>19:00 - <a href="#">Remo</a></td>
                         </tr>
                         <tr>
-                            <td>20:30 - <a href="#">Brettel</a></td>
+                            <td>20:30 - <a href="#">Brettel (Tharandt)</a></td>
                         </tr>
                         <tr>
                             <td>22:00 - <a href="#">Second Project</a></td>
@@ -53,19 +53,19 @@
                             <td>17:00 - <a href="#">MalKapaun</a></td>
                         </tr>
                         <tr>
-                            <td>18:10 - <a href="#">O'Reilly</a></td>
+                            <td>18:10 - <a href="#">O'Reilly (München)</a></td>
                         </tr>
                         <tr>
                             <td>19:20 - <a href="#">The Perky Pollyvocs</a></td>
                         </tr>
                         <tr>
-                            <td>20:30 - <a href="#">Trackstone</a></td>
+                            <td>20:30 - <a href="#">Trackstone (Polen)</a></td>
                         </tr>
                         <tr>
-                            <td>21:40 - <a href="#">First Born Unicorn</a></td>
+                            <td>21:40 - <a href="#">First Born Unicorn (Frankfurt am Main)</a></td>
                         </tr>
                         <tr>
-                            <td>22:50 - <a href="#">The Freaky Friday Jailhouse Gangn</a></td>
+                            <td>22:50 - <a href="#">The Freaky Friday Jailhouse Gang (Graz - Österreich)</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -96,21 +96,20 @@
     <div class="container">
         <img src="assets/images/kuenstler.png" alt="Künstler">
         <div class="artists-grid">
-            <a href="javascript:void(0);" class="artists-grid-item" data-artist-id="artist1">
-                <img src="assets/images/artist_tiles/artist_kachel4.jpg" alt="Artist 1">
-            </a>
-            <a href="javascript:void(0);" class="artists-grid-item" data-artist-id="artist2">
-                <img src="assets/images/artist_tiles/artist_kachel4.jpg" alt="Artist 2">
-            </a>
-            <a href="javascript:void(0);" class="artists-grid-item" data-artist-id="artist3">
-                <img src="assets/images/artist_tiles/artist_kachel4.jpg" alt="Artist 3">
-            </a>
-            <a href="javascript:void(0);" class="artists-grid-item" data-artist-id="artist4">
-                <img src="assets/images/artist_tiles/artist_kachel4.jpg" alt="Artist 4">
-            </a>
+            <?php
+            $artistFiles = glob("data/artists/*.json"); // Get all artist JSON files
+            foreach ($artistFiles as $file) {
+                $artistData = json_decode(file_get_contents($file), true);
+                $artistId = basename($file, ".json"); // Extract filename without extension
+                echo "<a href='javascript:void(0);' class='artists-grid-item' data-artist-id='$artistId'>
+                        <img src='{$artistData['image']}' alt='{$artistData['name']}'>
+                      </a>";
+            }
+            ?>
         </div>
     </div>
 </section>
+
 
 <div id="artistModal" class="modal">
     <div class="modal-content">

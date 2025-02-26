@@ -270,7 +270,7 @@ h2 {
 .program-table {
   width: 30%;
   border-collapse: collapse;
-  background-color: #fff;
+  background-color: #EBEB9F;
 }
 
 .program-table th, .program-table td {
@@ -288,7 +288,7 @@ h2 {
 }
 
 .program-table td {
-  background-color: #fff;
+  background-color: #EBEB9F;
   color: #31572c;
 }
 
@@ -317,7 +317,7 @@ h2 {
   overflow: hidden;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #EBEB9F;
 }
 
 .artists-grid-item img {
@@ -349,7 +349,7 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: #EBEB9F;
   padding: 20px;
   border-radius: 5px;
   max-width: 80%;
