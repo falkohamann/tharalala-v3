@@ -226,39 +226,82 @@
     <div class="parallax-container" id="parallax5">
         <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-1.jpeg');"></div>
     </div>
-    <section id="contact">
-        <div class="container">
-            <img src="assets/images/contact.png" alt="Kontakt" class="contact-image">
-            <div class="content-wrapper">
-                <div class="contact-section">
-                    <div class="contact-info">
-                        <h3>ALLGEMEINE ANFRAGEN</h3>
-                        <p class="email-address">info@tharalala.de</p>
-                    </div>
-                    <div class="contact-info">
-                        <h3>BOOKING ANFRAGEN</h3>
-                        <p class="email-address">booking@htharalala.de</p>
-                    </div>
+    <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST["name"]);
+    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+    $message = htmlspecialchars($_POST["message"]);
+    $privacyAccepted = isset($_POST["data-privacy"]);
+
+    if (empty($name) || empty($email) || empty($message) || !$privacyAccepted) {
+        $error = "Bitte füllen Sie alle Felder aus und akzeptieren Sie die Datenschutzerklärung.";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = "Bitte geben Sie eine gültige E-Mail-Adresse ein.";
+    } else {
+        $to = "falko.hamann@gmail.com"; // Change this
+        $subject = "Neue Nachricht von $name";
+        $headers = "From: $email\r\nReply-To: $email\r\nContent-Type: text/plain; charset=UTF-8";
+        $emailBody = "Name: $name\nEmail: $email\n\nNachricht:\n$message";
+
+        if (mail($to, $subject, $emailBody, $headers)) {
+            $success = "Vielen Dank! Ihre Nachricht wurde gesendet.";
+        } else {
+            $error = "Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut.";
+        }
+    }
+}
+?>
+
+<section id="contact">
+    <div class="container">
+        <img src="assets/images/contact.png" alt="Kontakt" class="contact-image">
+        <div class="content-wrapper">
+            <div class="contact-section">
+                <div class="contact-info">
+                    <h3>ALLGEMEINE ANFRAGEN</h3>
+                    <p class="email-address">info@tharalala.de</p>
                 </div>
-                <div class="form-section">
-                    <h2>WIR MELDEN UNS!</h2>
-                    <form action="#" method="post">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                        <label for="message">Nachricht</label>
-                        <textarea id="message" name="message" required rows="6"></textarea>
-                        <div class="checkbox-container">
-                            <input type="checkbox" id="data-privacy" name="data-privacy" required>
-                            <label for="data-privacy">Mit dem Absenden dieser Nachricht akzeptiere ich die <a href="#">Datenschutzerklärung</a></label>
-                        </div>
-                        <input type="submit" value="SENDEN">
-                    </form>
+                <div class="contact-info">
+                    <h3>BOOKING ANFRAGEN</h3>
+                    <p class="email-address">booking@htharalala.de</p>
                 </div>
             </div>
+
+            <div class="form-section">
+                <h2>WIR MELDEN UNS!</h2>
+
+                <!-- Display Success/Error Messages -->
+                <?php if (!empty($error)): ?>
+                    <p class="error-message"><?php echo $error; ?></p>
+                <?php endif; ?>
+                <?php if (!empty($success)): ?>
+                    <p class="success-message"><?php echo $success; ?></p>
+                <?php endif; ?>
+
+                <!-- Display Form Only If No Success Message -->
+                <?php if (empty($success)): ?>
+                    <form action="index.php" method="post">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required value="<?php echo isset($name) ? htmlspecialchars($name) : ''; ?>">
+
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required value="<?php echo isset($email) ? htmlspecialchars($email) : ''; ?>">
+
+                        <label for="message">Nachricht</label>
+                        <textarea id="message" name="message" required rows="6"><?php echo isset($message) ? htmlspecialchars($message) : ''; ?></textarea>
+
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="data-privacy" name="data-privacy" required <?php echo isset($privacyAccepted) ? 'checked' : ''; ?>>
+                            <label for="data-privacy">Mit dem Absenden dieser Nachricht akzeptiere ich die <a href="#">Datenschutzerklärung</a></label>
+                        </div>
+
+                        <input type="submit" value="SENDEN">
+                    </form>
+                <?php endif; ?>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <div class="parallax-container" id="parallax6">
         <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-3.jpeg');"></div>
