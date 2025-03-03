@@ -1,0 +1,19 @@
+{
+  "name": "First Born Unicorn",
+  "bio": "Firstborn Unicorn - der Name klingt nach purer Magie, aber diese Band verbringt keine Zaubertricks, sondern gibt dir genau diesen kraftvollen Punch aus Alternative-Rock, gepaart mit lyrischem Rap, den du schon so lange vermisst hast.\n\n\u200B\n\nDas energiegeladene Powertrio aus Frankfurt am Main hat seit seiner Gründung im Jahr 2016 die lokale Musikszene im Sturm erobert. Nun hat sich Firstborn Unicorn, bestehend aus Eric Fogg (Vocals & Gitarre), Alusine Khanu (Backings & Bass) und Finn Fenner (Backings & Drums seit 2022), aufgemacht, die Bühnen der gesamten Republik zu rocken.\n\n\u200B\n\nMit ihrer atemberaubenden Live-Performance auf Bühnen im In-und Ausland, mit über 150 Shows, darunter mehrere Deutschland-Tourneen, u.a. als Support Act für Feeder (UK), oder False Heads (UK). Weitere Höhepunkte waren Auftritte auf renommierten Veranstaltungen wie dem Blues & Jazz Festival Bamberg, dem Museumsuferfest Frankfurt am Main und dem Trebur Open Air. Inspiriert von einer breiten Palette von Einflüssen, darunter Red Hot Chili Peppers, Rage against the Machine, MF Doom, Eminem, Bilderbuch, Vulfpeck und vielen mehr, schaffen sie einen einzigartigen Sound, der mitreist.",
+  "image": "data/artists/images/placeholder.webp",
+  "schedule":
+    {
+      "date": "Samstag",
+      "time": "21:40",
+      "stage": "Zelt"
+    }
+  ,
+  "social": {
+    "facebook": "http://facebook.com/firstbornunicorn.band",
+    "instagram": "http://instagram.com/firstbornunicorn.band/",
+    "youtube": "http://youtube.com/firstbornunicorn",
+    "spotify": "https://open.spotify.com/artist/7yEXgnAmyufozBlMSqoJii?si=gd3mK93WTGOKG_4W_-oUuA",
+    "url": "https://www.firstborn-unicorn.com/"
+  }
+}

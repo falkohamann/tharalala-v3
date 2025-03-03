@@ -1,18 +1,19 @@
 {
-  "name": "The Example Band",
-  "genre": "Rock",
-  "bio": "A short biography about the artist, highlighting their style and achievements.",
-  "image": "assets/images/artist_tiles/artist_kachel4.jpg",
-  "schedule": [
+  "name": "Remo",
+  "bio": "Aus dem Wohnzimmer, über den Kiez, einmal quer durchs Universum und zurück: In einem Balanceakt aus alltäglichen Lebensrealitäten und fantastischer Utopie - mal leise, mal laut - besingt Remo Geschichten, die das Leben schreibt. Von Träumen, die bis zum Morgengrauen auf den Mauern der Gewohnheit tanzen, bis sie vor lauter Ekstase das ganze Kartenhaus zum Einsturz bringen. Musik zum Landen und wieder Abheben, Texte mit Tiefgang für den nächsten Höhenflug.",
+  "image": "data/artists/images/remo.png",
+  "schedule":
     {
-      "date": "2025-08-21",
-      "time": "21:00",
-      "stage": "Main Stage"
-    },
-    {
-      "date": "2025-08-22",
-      "time": "19:30",
-      "stage": "Acoustic Stage"
+      "date": "Freitag",
+      "time": "19:00",
+      "stage": "Zelt"
     }
-  ]
+  ,
+  "social": {
+    "facebook": "https://www.facebook.com/r.devago/\n",
+    "instagram": "https://www.instagram.com/remodevago/",
+    "youtube": "https://www.youtube.com/channel/UCWU3FXPaXEG7xBj6PrpbPdA",
+    "spotify": "https://open.spotify.com/artist/5mZhue4LW8sI8cwNGqoZFE?si=rPSjGQXPSbCts7Gu5Bfhiw\n",
+    "url": "https://remodevago.bandcamp.com/releases"
+  }
 }

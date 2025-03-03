@@ -1,18 +1,19 @@
 {
-  "name": "The Example Band",
-  "genre": "Rock",
-  "bio": "A short biography about the artist, highlighting their style and achievements.",
-  "image": "assets/images/artist_tiles/artist_kachel4.jpg",
-  "schedule": [
+  "name": "Brettel",
+  "bio": "Brettel ist mit seinen Liedern seit vielen Jahren im Kreis\nder Liedermacher-Szene unterwegs. Außerdem spielt der gebürtige Dresdner\nin seinem Folk-Programm Musik aus aller Welt. Dabei bedient er sich an\neiner bunten Palette von Songs.",
+  "image": "data/artists/images/brettel.jpeg",
+  "schedule":
     {
-      "date": "2025-08-21",
-      "time": "21:00",
-      "stage": "Main Stage"
-    },
-    {
-      "date": "2025-08-22",
-      "time": "19:30",
-      "stage": "Acoustic Stage"
+      "date": "",
+      "time": "",
+      "stage": ""
     }
-  ]
+  ,
+  "social": {
+    "facebook": "https://www.facebook.com/brettel/\n",
+    "instagram": "",
+    "youtube": "https://www.youtube.com/channel/UCi2zZK90jNXnOfCXUd01Z0A",
+    "spotify": "https://open.spotify.com/artist/0HlZE9Den7z0Tb1hC6DuAw",
+    "url": ""
+  }
 }
