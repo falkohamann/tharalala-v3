@@ -1,4 +1,3 @@
-<!-- style.css -->
 /* --- Variables --- */
 :root {
   --primary-color: #4f772d;
@@ -407,12 +406,13 @@ h2 {
 
 /* --- Footer --- */
 footer {
-  background-color: var(--primary-color);
-  color: #90a955;
+  background-color: var(--background-color); /* Use the same background color as the main content */
+  color: var(--text-color); /* Ensure text color is consistent */
   text-align: center;
   padding: 1rem 0;
   margin-top: auto;
   position: relative;
+  width: 100%;
 }
 
 footer a {
