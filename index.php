@@ -101,8 +101,8 @@
             foreach ($artistFiles as $file) {
                 $artistData = json_decode(file_get_contents($file), true);
                 $artistId = basename($file, ".json"); // Extract filename without extension
-                echo "<a href='javascript:void(0);' class='artists-grid-item' data-artist-id='$artistId'>
-                        <img src='{$artistData['image']}' alt='{$artistData['name']}'>
+                echo "<a href='javascript:void(0);' class='artists-grid-item' data-artist-id='" . htmlspecialchars($artistId) . "'>
+                        <img src='" . htmlspecialchars($artistData['image']) . "' alt='" . htmlspecialchars($artistData['name']) . "'>
                       </a>";
             }
             ?>
@@ -113,7 +113,7 @@
 
 <div id="artistModal" class="modal">
     <div class="modal-content">
-        <span class="close-button">&times;</span>
+        <button class="close-button" aria-label="Close">&times;</button>
         <div class="modal-header">
             <img src="" alt="" id="modal-image">
             <h2 id="modal-artist-name"></h2>
@@ -204,10 +204,10 @@
 
 <div class="gallery-modal">
     <div class="gallery-modal-content">
-        <span class="gallery-close-button">&times;</span>
-        <button class="gallery-nav-btn gallery-prev">&lt;</button>
+        <button class="gallery-close-button" aria-label="Close">&times;</button>
+        <button class="gallery-nav-btn gallery-prev" aria-label="Previous Image">&lt;</button>
         <img class="gallery-modal-image" src="" alt="">
-        <button class="gallery-nav-btn gallery-next">&gt;</button>
+        <button class="gallery-nav-btn gallery-next" aria-label="Next Image">&gt;</button>
     </div>
 </div>
 </div>
