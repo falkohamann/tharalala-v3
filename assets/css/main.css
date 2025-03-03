@@ -88,7 +88,7 @@ section {
 
 /* Footer */
 footer {
-    background: #ecf39e; /* Match the main content background color */
+    background-color: #ecf39e !important; /* Ensure it overrides any other styles */
     color: #4f772d; /* Adjust text color for contrast */
     text-align: center;
     padding: 1rem;
