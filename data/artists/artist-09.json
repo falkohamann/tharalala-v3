@@ -1,0 +1,19 @@
+{
+  "name": "The Freaky Friday Jailhouse Gang",
+  "bio": "“The Freaky Friday Jailhouse Gang” sind eine österreichische Funkband\naus Graz, bestehend aus Sängerin Lorena Valta, Gitarrist Markus\nSteinrück, Bassist Tobias Steinrück und Schlagzeuger Fabian Steinrück.\n(Nein, die Nachnamen sind kein Zufall, es sind Brüder ;)\nDie Bandgründung fand gegen 2011 statt, gespielt wurden Covers von\nSting über Stevie Wonder bis zu den Beatles, aber 2020 wurde dann\nendlich eigene Musik geschrieben - das Hauptgenre ist Funk, aber\ndieser wird stark beeinflusst durch ihre Rock, Blues und Jazz\nBackgrounds.\nDer bisherige Karrierehöhepunkt fand im Sommer 2022 statt, sie hatten\ndas große Vergnügen als Support Act für TOTO in ihrer Heimatstadt\nGraz zu spielen!",
+  "image": "data/artists/images/ffjg.webp",
+  "schedule":
+    {
+      "date": "Samstag",
+      "time": "22:50",
+      "stage": "Große Bühne"
+    }
+  ,
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "youtube": "https://www.youtube.com/@TheFreakyFridayJailhouseGang",
+    "spotify": "",
+    "url": "https://www.thefreakyfridayjailhousegang.com/"
+  }
+}

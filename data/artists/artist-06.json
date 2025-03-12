@@ -1,0 +1,19 @@
+{
+  "name": "The Perky Pollyvocs",
+  "bio": "Die Perky Pollyvocs aus Dresden bringen einen Mix aus Western Swing, Hillbilly Boogie,\nR&B und Jazz im Stil der 30er bis 50er Jahre in den Gehörgang. Namen wie Hank\nPenny, Lucky Millinder, Tex Williams, Ink Spots und Jimmy Rodgers finden sich ebenso\nim Repertoire wie die ein oder andere Eigenkomposition. Sie selbst nennen ihren Mix\n\"Polyvocal Swing\", bei dem vor allem der mehrstimmige Gesang heraussticht. Das\nanimiert nicht nur zur rhythmischen Anteilnahme, sondern hinterlässt jedes mal\nbegeisterte Gesichter sowie das ein oder andere Schmunzeln, denn Spaß steht bei den\nPollyvocs an erster Stelle. Das Debütalbum \"Tales From The Pond\" erschien 2019, seit\nJuli 2023 ist das aktuelle Machwerk ''...Til The Cows Come Home'' am Start.",
+  "image": "data/artists/images/perky.webp",
+  "schedule":
+    {
+      "date": "Samstag",
+      "time": "19:20",
+      "stage": "Zelt"
+    }
+  ,
+  "social": {
+    "facebook": "https://www.facebook.com/ThePerkyPollyvocs/",
+    "instagram": "https://www.instagram.com/theperkypollyvocs/",
+    "youtube": "https://www.youtube.com/@theperkypollyvocs2913",
+    "spotify": "",
+    "url": ""
+  }
+}
