@@ -31,13 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const websiteLink = document.getElementById("website-link");
     const artistCloseButton = artistModal.querySelector(".close-button");
 
-    // Check if modal exists
     if (!artistModal) {
         console.error("Artist modal not found in the DOM.");
         return;
     }
 
-    // Function to open modal with artist data
     function openArtistModal(artistId) {
         console.log(`Opening modal for artist: ${artistId}`);
 
@@ -54,10 +52,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 modalArtistName.textContent = artist.name;
                 modalBio.textContent = artist.bio;
 
-                facebookLink.href = artist.facebook || "#";
-                instagramLink.href = artist.instagram || "#";
-                spotifyLink.href = artist.spotify || "#";
-                websiteLink.href = artist.website || "#";
+                const socialLinks = {
+                    'facebook-link': artist.social.facebook,
+                    'instagram-link': artist.social.instagram,
+                    'spotify-link': artist.social.spotify,
+                    'website-link': artist.social.url,
+                    'youtube-link': artist.social.youtube
+                };
+
+                for (const [id, url] of Object.entries(socialLinks)) {
+                    const linkElement = document.getElementById(id);
+                    if (url && url.trim() !== "") {
+                        linkElement.href = url;
+                        linkElement.style.display = 'inline-block';
+                    } else {
+                        linkElement.style.display = 'none';
+                    }
+                }
 
                 artistModal.style.display = "block";
             })
@@ -67,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
-    // **Event Delegation for Artist Clicks**
+    // Event Delegation for Artist Clicks
     document.body.addEventListener("click", function (event) {
         const target = event.target.closest(".artists-grid-item");
         if (target) {
@@ -80,12 +91,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Close modal when clicking outside or pressing ESC
-    if (artistCloseButton) {
-        artistCloseButton.addEventListener("click", function () {
-            artistModal.style.display = "none";
-        });
-    }
+    // Close modal functionality
+    artistCloseButton.addEventListener("click", function () {
+        artistModal.style.display = "none";
+    });
 
     artistModal.addEventListener("click", function (event) {
         if (event.target === artistModal) {

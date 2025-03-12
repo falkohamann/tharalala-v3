@@ -97,10 +97,10 @@
         <img src="assets/images/kuenstler.png" alt="Künstler">
         <div class="artists-grid">
             <?php
-            $artistFiles = glob("data/artists/*.json"); // Get all artist JSON files
+            $artistFiles = glob("data/artists/*.json");
             foreach ($artistFiles as $file) {
                 $artistData = json_decode(file_get_contents($file), true);
-                $artistId = basename($file, ".json"); // Extract filename without extension
+                $artistId = basename($file, ".json");
                 echo "<a href='javascript:void(0);' class='artists-grid-item' data-artist-id='" . htmlspecialchars($artistId) . "'>
                         <img src='" . htmlspecialchars($artistData['image']) . "' alt='" . htmlspecialchars($artistData['name']) . "'>
                       </a>";
@@ -109,7 +109,6 @@
         </div>
     </div>
 </section>
-
 
 <div id="artistModal" class="modal">
     <div class="modal-content">
@@ -122,6 +121,7 @@
             <p id="modal-bio"></p>
             <div class="social-links">
                 <a href="#" target="_blank" id="facebook-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank" id="youtube-link"><i class="fab fa-youtube"></i></a>
                 <a href="#" target="_blank" id="instagram-link"><i class="fab fa-instagram"></i></a>
                 <a href="#" target="_blank" id="spotify-link"><i class="fab fa-spotify"></i></a>
                 <a href="#" target="_blank" id="website-link"><i class="fas fa-globe"></i></a>
