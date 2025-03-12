@@ -1,0 +1,19 @@
+{
+  "name": "MalKapaun",
+  "bio": "Die Band MalKapaun aus Kassel/ Alfeld (Leine) bestand Gerüchten zufolge einmal aus 13 Mitgliedern, von denen alle, bis auf eines, nach und nach unter mysteriösen Umständen verschwanden. Nachprüfen lässt sich diese über Jahrhunderte weiter gereichte Erzählung zwar nicht, aber eines ist mittlerweile sicher: Dieses eine Mitglied ist tatsächlich noch am Leben und scheint mehr als bereit zu sein, seiner Hörerschaft alle ihm bekannten Facetten des Lebens musikalisch darzubieten und die wahre Geschichte der Band zu erzählen.\n\nDer Musikstil der Band wird im Fachjargon als „Chaos-Pop“ bezeichnet, als Quelle dafür wird häufig folgendes Rezept aufgeführt:\n\nMan nehme deutschsprachige Texte, versehe sie mit einer ordentlichen Portion schwarzhumoriger Geschichten (mal gesellschaftlich, mal persönlich), würze sie reichlich mit Wortspielen, Metaphern und Sarkasmus. Dabei mehrfach die Perspektive wechseln und wenden. Die Texte mal rappen, mal singen und gelegentlich komplett vergessen (leicht schütteln und dann etwas ziehen lassen, wodurch sich eine leichte Punkrock-Ethik entfalten sollte). Die Begleitung erfolgt lediglich durch eine Akustik-Gitarre, welche mal lauter und leiser in Erscheinung treten darf (beachte bitte: Keine Effekte, kein Plastik, kein Schnickschnack, dadurch wird die Musik komplett biologisch abbaubar). Nun alle Zutaten in einen überteuerten Thermomix geben, das Intro abwarten und fertig ist der sogenannte „Chaos-Pop“.",
+  "image": "data/artists/images/malkapaun.webp",
+  "schedule":
+    {
+      "date": "Samstag",
+      "time": "17:00",
+      "stage": "Zelt"
+    }
+  ,
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "youtube": "",
+    "spotify": "",
+    "url": ""
+  }
+}

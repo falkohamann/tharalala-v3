@@ -307,29 +307,34 @@ h2 {
 /* --- Artist Section --- */
 .artists-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1.5rem;
 }
 
 .artists-grid-item {
   position: relative;
   overflow: hidden;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: #EBEB9F;
+  background-color: #8FAA55;
+
+  /* Center content using Flexbox */
+  display: flex;
+  align-items: center;       /* Vertically center */
+  justify-content: center;   /* Horizontally center */
+  min-height: 300px;         /* Optional: set box height */
 }
 
 .artists-grid-item img {
-  width: 100%;
-  height: auto;
-  display: block;
+  max-width: 100%;     /* Maintain original proportions */
+  max-height: 100%;    /* Prevent overflowing vertically */
+  height: auto;        /* Automatic height maintains aspect ratio */
+  width: auto;         /* Auto width maintains original size */
   transition: transform 0.3s ease;
 }
 
 .artists-grid-item:hover img {
   transform: scale(1.1);
 }
-
 /* --- Modal --- */
 .modal {
   display: none;
