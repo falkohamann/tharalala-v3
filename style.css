@@ -59,6 +59,14 @@ header .container {
   margin-right: 1rem;
 }
 
+.event-dates {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  flex-grow: 1; /* Allow the dates to take up available space */
+  text-align: center; /* Center the text horizontally */
+}
+
 nav {
   flex-grow: 1;
   display: flex;
@@ -225,9 +233,13 @@ section {
 .map-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%;
+  max-width: 800px; /* Limit the width of the map */
   height: 0;
+  padding-bottom: 50%; /* Adjust aspect ratio for a smaller map */
   overflow: hidden;
+  border: 2px solid #3B5F30; /* Add a border with the specified color */
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .map-container iframe {
@@ -432,6 +444,17 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+.footer-logo {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  height: auto;
+  display: inline-block;
 }
 
 /* --- Contact Section --- */
@@ -905,49 +928,62 @@ textarea {
   }
 }
 
-/* --- Location Section --- */
-#location {
-    padding: 4rem 0; /* Add more padding for better spacing */
-    background-color: #90a955;
-    color: var(--text-color);
-}
-
-#location .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem; /* Add spacing between elements */
-}
-
-#location img {
-    max-width: 80%;
-    height: auto;
-    margin-bottom: 2rem;
-}
-
-#location p {
-    text-align: center;
-    margin-bottom: 2rem;
-    line-height: 1.8; /* Improve readability */
-}
-
-.map-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px; /* Limit the width of the map */
-    height: 0;
-    padding-bottom: 50%; /* Adjust aspect ratio for a smaller map */
-    overflow: hidden;
-    border: 2px solid var(--primary-color); /* Add a border for better separation */
-    border-radius: 8px; /* Add rounded corners */
+/* --- Tharalala Summary --- */
+.tharalala-summary {
+    background-color: rgba(236, 243, 158, 0.7); /* Match the content wrapper background */
+    padding: 2rem;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin: 2rem auto; /* Add spacing around the section */
+    max-width: 85%; /* Limit the width for better readability */
+    line-height: 1.8; /* Improve text readability */
+    color: var(--primary-color); /* Use primary color for text */
 }
 
-.map-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0; /* Remove default iframe border */
+.tharalala-summary h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center; /* Center the heading */
+    color: var(--primary-color);
+}
+
+.tharalala-summary p {
+    margin-bottom: 1rem;
+    text-align: justify; /* Justify text for a clean look */
+}
+
+.tharalala-summary ul {
+    list-style-type: disc;
+    margin-left: 2rem; /* Add indentation for the list */
+    margin-bottom: 1rem;
+}
+
+.tharalala-summary li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6; /* Improve readability for list items */
+}
+
+.tharalala-retrospective {
+    background-color: rgba(236, 243, 158, 0.7); /* Match the content wrapper background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin: 2rem auto; /* Add spacing around the section */
+    max-width: 85%; /* Limit the width for better readability */
+    line-height: 1.8; /* Improve text readability */
+    color: var(--primary-color); /* Use primary color for text */
+}
+
+.tharalala-retrospective h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center; /* Center the heading */
+    color: var(--primary-color);
+}
+
+.tharalala-retrospective p {
+    margin-bottom: 1rem;
+    text-align: justify; /* Justify text for a clean look */
 }
