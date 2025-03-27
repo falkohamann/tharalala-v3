@@ -325,10 +325,11 @@ h2 {
 }
 
 .artists-grid-item img {
-  max-width: 100%;     /* Maintain original proportions */
-  max-height: 100%;    /* Prevent overflowing vertically */
-  height: auto;        /* Automatic height maintains aspect ratio */
-  width: auto;         /* Auto width maintains original size */
+  max-width: 90%; /* Ensure the image does not exceed the grid width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits within the grid */
+  display: block; /* Ensure the image behaves like a block element */
+  margin: auto; /* Center the image horizontally and vertically */
   transition: transform 0.3s ease;
 }
 
@@ -359,7 +360,9 @@ h2 {
   border-radius: 5px;
   max-width: 80%;
   width: 80%;
-  max-height: 80vh;
+  height: auto; /* Allow the modal height to adjust based on its content */
+  max-height: 90vh; /* Ensure it doesn't exceed the viewport height */
+  overflow-y: auto; /* Add scroll if content exceeds the viewport height */
 }
 
 .modal-header img {
@@ -734,13 +737,15 @@ textarea {
     }
 
 .image-grid {
-        grid-template-columns: repeat(auto-fill, minmax(75px, 2fr)) !important;
+        grid-template-columns: repeat(auto-fill, minmax(75px, 1fr)); /* Adjusted to ensure proper centering */
         gap: 10px;
+        justify-content: center; /* Ensures the grid is centered */
     }
 
     .image-item {
         aspect-ratio: 1;
         width: 100%;
+        margin: 0 auto; /* Centers the image inside the container */
     }
 
     .gallery-container {
@@ -889,5 +894,13 @@ textarea {
 
   #contact form input[type="submit"] {
     font-size: 1rem;
+  }
+
+  .artists-grid-item img {
+    max-width: 90%; /* Ensure the image does not exceed the grid width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the grid */
+    display: block; /* Ensure the image behaves like a block element */
+    margin: auto; /* Center the image horizontally and vertically */
   }
 }
