@@ -28,13 +28,14 @@
                             <td>18:00 - <a href="#">Einlaß</a></td>
                         </tr>
                         <tr>
-                            <td>19:00 - <a href="#">Remo</a></td>
+                            <td>19:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-01">Remo</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>20:30 - <a href="#">Brettel (Tharandt)</a></td>
+                            <td>20:30 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-02">Brettel (Tharandt)</a></td>
                         </tr>
                         <tr>
-                            <td>22:00 - <a href="#">Second Project</a></td>
+                            <td>22:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-03">Second Project</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -47,25 +48,25 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>16:00 - <a href="#">Einlaß</a></td>
+                            <td>16:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-02">Einlaß</a></td>
                         </tr>
                         <tr>
-                            <td>17:00 - <a href="#">MalKapaun</a></td>
+                            <td>17:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-04">MalKapaun</a></td>
                         </tr>
                         <tr>
-                            <td>18:10 - <a href="#">O'Reilly (München)</a></td>
+                            <td>18:10 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-05">O'Reilly (München)</a></td>
                         </tr>
                         <tr>
-                            <td>19:20 - <a href="#">The Perky Pollyvocs</a></td>
+                            <td>19:20 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-06">The Perky Pollyvocs</a></td>
                         </tr>
                         <tr>
-                            <td>20:30 - <a href="#">Trackstone (Polen)</a></td>
+                            <td>20:30 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-07">Trackstone (Polen)</a></td>
                         </tr>
                         <tr>
-                            <td>21:40 - <a href="#">First Born Unicorn (Frankfurt am Main)</a></td>
+                            <td>21:40 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-08">First Born Unicorn (Frankfurt am Main)</a></td>
                         </tr>
                         <tr>
-                            <td>22:50 - <a href="#">The Freaky Friday Jailhouse Gang (Graz - Österreich)</a></td>
+                            <td>22:50 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-09">The Freaky Friday Jailhouse Gang (Graz - Österreich)</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -78,10 +79,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>11:00 - <a href="#">Band C</a></td>
-                        </tr>
-                        <tr>
-                            <td>16:00 - <a href="#">Band F</a></td>
+                            <td>wird noch bekannt gegeben</td>
                         </tr>
                     </tbody>
                 </table>
@@ -149,7 +147,7 @@
     <section id="location">
         <div class="container">
             <img src="assets/images/location.png" alt="Location">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+            <p>Die Kuppelhalle Tharandt ist ein lebendiges Mehrgenerationenhaus und soziokulturelles Zentrum, das unter dem Motto "Irgendwas ist immer!" vielfältige Veranstaltungen und Angebote für alle Altersgruppen bietet. Mit ihrem einzigartigen architektonischen Charme und der flexiblen Raumgestaltung eignet sich die Kuppelhalle hervorragend als Partylocation für das Musikfestival Tharalala. Die einladende Atmosphäre und die zentrale Lage machen sie zum idealen Treffpunkt für Musikliebhaber und Feiernde, die gemeinsam unvergessliche Momente erleben möchten.
             </p>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.8972397889434!2d13.581857799999998!3d50.981089999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709db66d1315023%3A0x53f84a21561fa28c!2sKuppelhalle%20Tharandt!5e0!3m2!1sde!2sde!4v1737814041368!5m2!1sde!2sde" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

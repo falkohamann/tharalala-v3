@@ -78,9 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
-    // Event Delegation for Artist Clicks
+    // Event Delegation for Artist Clicks (artists-grid-item and timetable-artist-link)
     document.body.addEventListener("click", function (event) {
-        const target = event.target.closest(".artists-grid-item");
+        const target = event.target.closest(".artists-grid-item, .timetable-artist-link");
         if (target) {
             const artistId = target.dataset.artistId;
             if (artistId) {
