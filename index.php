@@ -134,33 +134,30 @@
     <section id="info">
         <div class="container">
             <img src="assets/images/info.png" alt="Festival Info">
-            <div class="tharalala-summary">
-  <h2>Entdecke Tharalala – Dein Musikfestival in Tharandt!</h2>
-  
-  <p>Willkommen beim Tharalala Musik Festival! Tauche ein in ein besonderes Erlebnis, das Musik und Gemeinschaft in den Mittelpunkt stellt. Mitten in Tharandt erwartet dich:</p>
-  
-  <ul>
-    <li>
-      <strong>Vielfältige Klänge:</strong> 
-      Freu dich auf ein buntes und vielfältiges musikalisches Programm mit aufstrebenden Newcomern neben etablierten Acts aus der Region und darüber hinaus. Hier gibt es immer wieder Neues zu entdecken!
-    </li>
-    <li>
-      <strong>Einzigartige Atmosphäre:</strong> 
-      Genieße die entspannte, fast familiäre Stimmung. Tharalala ist mehr als nur ein Festival – es ist ein Treffpunkt für Musikliebhaber und Freunde, die eine gute Zeit schätzen.
-    </li>
-    <li>
-      <strong>Für das leibliche Wohl:</strong> 
-      Neben der Musik sorgt ein Markt mit regionalen Köstlichkeiten und Getränken dafür, dass es dir an nichts fehlt und lädt zum gemütlichen Verweilen ein.
-    </li>
-    <li>
-      <strong>Der Ort:</strong> 
-      Erlebe Konzerte und Gemeinschaft in der Stadt Tharandt, die dem Festival eine einzigartige Kulisse verleiht.
-    </li>
-  </ul>
-  
-  <p>Das Tharalala Musik Festival ist dein Wochenende voller musikalischer Entdeckungen und entspannter Gemeinschaft. Sei dabei und erlebe unvergessliche Momente!</p>
-</div>
+            <div class="content-section">
+                <h2>Entdecke Tharalala – Dein Musikfestival in Tharandt!</h2>
+                <p>Willkommen beim Tharalala Musik Festival! Tauche ein in ein besonderes Erlebnis, das Musik und Gemeinschaft in den Mittelpunkt stellt. Mitten in Tharandt erwartet dich:</p>
+                <ul>
+                    <li>
+                        <strong>Vielfältige Klänge:</strong> 
+                        Freu dich auf ein buntes und vielfältiges musikalisches Programm mit aufstrebenden Newcomern neben etablierten Acts aus der Region und darüber hinaus. Hier gibt es immer wieder Neues zu entdecken!
+                    </li>
+                    <li>
+                        <strong>Einzigartige Atmosphäre:</strong> 
+                        Genieße die entspannte, fast familiäre Stimmung. Tharalala ist mehr als nur ein Festival – es ist ein Treffpunkt für Musikliebhaber und Freunde, die eine gute Zeit schätzen.
+                    </li>
+                    <li>
+                        <strong>Für das leibliche Wohl:</strong> 
+                        Neben der Musik sorgt ein Markt mit regionalen Köstlichkeiten und Getränken dafür, dass es dir an nichts fehlt und lädt zum gemütlichen Verweilen ein.
+                    </li>
+                    <li>
+                        <strong>Der Ort:</strong> 
+                        Erlebe Konzerte und Gemeinschaft in der Stadt Tharandt, die dem Festival eine einzigartige Kulisse verleiht.
+                    </li>
+                </ul>
+                <p>Das Tharalala Musik Festival ist dein Wochenende voller musikalischer Entdeckungen und entspannter Gemeinschaft. Sei dabei und erlebe unvergessliche Momente!</p>
             </div>
+        </div>
     </section>
 
     <div class="parallax-container" id="parallax4">
@@ -168,10 +165,9 @@
     </div>
 
     <section id="location">
-    
         <div class="container">
-        <img src="assets/images/location.png" alt="Location">
-            <div class="tharalala-retrospective">
+            <img src="assets/images/location.png" alt="Location">
+            <div class="content-section">
                 <p>Die Kuppelhalle Tharandt ist ein lebendiges Mehrgenerationenhaus und soziokulturelles Zentrum, das unter dem Motto "Irgendwas ist immer!" vielfältige Veranstaltungen und Angebote für alle Altersgruppen bietet. Mit ihrem einzigartigen architektonischen Charme und der flexiblen Raumgestaltung eignet sich die Kuppelhalle hervorragend als Partylocation für das Musikfestival Tharalala. Die einladende Atmosphäre und die zentrale Lage machen sie zum idealen Treffpunkt für Musikliebhaber und Feiernde, die gemeinsam unvergessliche Momente erleben möchten.</p>
                 <p>Adresse & Anfahrt:<br><br>Kuppelhalle e.V.<br>Pienner Str. 13<br>01737 Tharandt</p>
                 <div class="map-container">
@@ -187,6 +183,7 @@
     <section id="pictures">
         <div class="container">
             <img src="assets/images/pictures.png" alt="Bilder">
+            <div class="content-section">
             <div class="text-container">
             <p>Taucht ein in magische Festival-Momente! Unsere Bildergalerie nimmt euch mit auf eine visuelle Reise durch das Tharalala Musik Festival - von mitreißenden Live-Performances über ausgelassene Tanzszenen bis hin zu den kleinen, besonderen Augenblicken, die dieses Festival so einzigartig machen. Lasst die Atmosphäre noch einmal aufleben und entdeckt vielleicht sogar euch selbst in einem der Schnappschüsse.</p>
             </div>
@@ -223,8 +220,10 @@
             }
             echo "</div>";
             echo "</section>";
-        }
+        }        
+            
     }
+    echo "</div>";
     ?>
 
 <div class="gallery-modal">
@@ -244,29 +243,24 @@
     <section id="past">
         <div class="container">
             <img src="assets/images/past.png" alt="Vergangenes">
-            <div class="tharalala-retrospective">
+            <div class="content-section">
                 <h2>Rückblick: Zwei Jahre Tharalala Musikfestival</h2>
-                
                 <p>
                     Seit seiner Premiere im Jahr 2023 hat sich das Tharalala Musikfestival in Tharandt zu einem echten Highlight im regionalen Veranstaltungskalender entwickelt. Was aus einer Idee von ein paar Freunden und mit Hilfe des Vereins Kuppelhalle Tharandt e.V. entstand, ist mittlerweile ein fester Bestandteil des kulturellen Lebens im Tharandter Wald.
                 </p>
-                
                 <p>
                     2023 begeisterte das Festival bei seiner ersten Ausgabe mit handgemachter Live-Musik, liebevoller Dekoration und einem familiären Flair. Die Kombination aus regionalen Künstlern, abwechslungsreiches Musikprogramm und einem offenen Konzept traf den Nerv der Besucherinnen und Besucher.
                 </p>
-                
                 <p>
                     2024 knüpfte die zweite Ausgabe nahtlos an diesen Erfolg an. Noch mehr Bands, ein erweitertes Programm mit der traditionellen "längsten Frühstückstafel Tharandts" und ein gut besuchter Frühschoppen am Sonntagvormittag sorgten für unvergessliche Momente. Die Integration des Spielplatzes sowie die barrierefreie Gestaltung des Geländes machten das Festival erneut zu einem Erlebnis für alle Generationen.
                 </p>
-                
                 <p>
                     Besonders hervorzuheben ist das starke ehrenamtliche Engagement, das hinter dem Festival steht. Ohne die zahlreichen Helferinnen und Helfer wäre Tharalala nicht das, was es heute ist: ein Ort für Musik, Begegnung und Gemeinschaft.
                 </p>
-                
                 <p>
                     Wir freuen uns auf viele weitere Jahre Tharalala!
                 </p>
-                </div>
+            </div>
         </div>
     </section>
 

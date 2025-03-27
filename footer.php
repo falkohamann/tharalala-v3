@@ -1,9 +1,17 @@
 <footer>
     <div class="container">
         <p>&copy; Tharalala Musik Festival</p>
-        <p>
-            <a href="#" data-page="impressum">Impressum</a>
-            <a href="#" data-page="datenschutz">Datenschutz</a>
-        </p>
+        <div class="footer-links">
+            <a href="datenschutz.php">Datenschutzerklärung</a> | 
+            <a href="impressum.php">Impressum</a>
+        </div>
+        <div class="footer-logo">
+            <a href="https://denkinstanz.de" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/denkinstanz.webp" alt="Denkinstanz Logo">
+            </a>
+            <a href="https://kuppelhalle.com/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/kuhalogo.webp" alt="Kuppelhalle Logo">
+            </a>
+        </div>
     </div>
 </footer>

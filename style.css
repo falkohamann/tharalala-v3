@@ -457,6 +457,21 @@ footer a:hover {
   display: inline-block;
 }
 
+.footer-links {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 /* --- Contact Section --- */
 #contact {
   padding: 4rem 0;
@@ -964,7 +979,7 @@ textarea {
     line-height: 1.6; /* Improve readability for list items */
 }
 
-.tharalala-retrospective {
+.content-section {
     background-color: rgba(236, 243, 158, 0.7); /* Match the content wrapper background */
     padding: 2rem;
     border-radius: 10px;
@@ -975,7 +990,7 @@ textarea {
     color: var(--primary-color); /* Use primary color for text */
 }
 
-.tharalala-retrospective h2 {
+.content-section h2 {
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -983,7 +998,7 @@ textarea {
     color: var(--primary-color);
 }
 
-.tharalala-retrospective p {
+.content-section p {
     margin-bottom: 1rem;
     text-align: justify; /* Justify text for a clean look */
 }
