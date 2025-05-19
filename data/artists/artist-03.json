@@ -1,14 +1,12 @@
 {
-  "name": "Second project",
-  "bio": "",
+  "name": "Second Project",
+  "bio": "Rock, der durch die Jahrzehnten feiert Second Project aus Freiberg ist mehr als eine Coverband – sie sind eine Energie-Ladung Rockgeschichte! Mit einer Mischung aus Klassikern und Kultsongs bringen sie die größten Rockmomente auf die Bühne – mal wild, mal emotional, aber immer mitreißend. Ob Stadionrock, Pop-Hymnen oder Alternative-Kracher – Second Project verleiht jeder Nummer ihren eigenen Touch. Ihr Repertoire reicht von AC/DC bis zu modernen Rockhelden, immer darauf aus, das Publikum zum Feiern zu bringen. Second Project – der Soundtrack für alle, die Rock lieben.",
   "image": "data/artists/images/second.webp",
-  "schedule":
-    {
-      "date": "Freitag",
-      "time": "20:30",
-      "stage": "Große Bühne"
-    }
-  ,
+  "schedule": {
+    "date": "Freitag",
+    "time": "20:30",
+    "stage": "Große Bühne"
+  },
   "social": {
     "facebook": "",
     "instagram": "",

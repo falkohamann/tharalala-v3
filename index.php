@@ -44,7 +44,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>16:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-02">Einlaß</a></td>
+                            <td>17:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-02">Einlaß</a></td>
                         </tr>
                         <tr>
                             <td>18:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-04">MalKapaun</a></td>
