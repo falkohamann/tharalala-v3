@@ -4,9 +4,9 @@
   "image": "data/artists/images/second.webp",
   "schedule":
     {
-      "date": "",
-      "time": "",
-      "stage": ""
+      "date": "Freitag",
+      "time": "20:30",
+      "stage": "Große Bühne"
     }
   ,
   "social": {

@@ -28,14 +28,10 @@
                             <td>18:00 - <a href="#">Einlaß</a></td>
                         </tr>
                         <tr>
-                            <td>19:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-01">Remo</a>
-                            </td>
+                            <td>19:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-02">Brettel (Tharandt)</a></td>
                         </tr>
                         <tr>
-                            <td>20:30 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-02">Brettel (Tharandt)</a></td>
-                        </tr>
-                        <tr>
-                            <td>22:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-03">Second Project</a></td>
+                            <td>20:30 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-03">Second Project</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -51,22 +47,16 @@
                             <td>16:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-02">Einlaß</a></td>
                         </tr>
                         <tr>
-                            <td>17:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-04">MalKapaun</a></td>
+                            <td>18:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-04">MalKapaun</a></td>
                         </tr>
                         <tr>
-                            <td>18:10 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-05">O'Reilly (München)</a></td>
+                            <td>19:30 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-06">The Perky Pollyvocs</a></td>
                         </tr>
                         <tr>
-                            <td>19:20 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-06">The Perky Pollyvocs</a></td>
+                            <td>21:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-08">First Born Unicorn (Frankfurt am Main)</a></td>
                         </tr>
                         <tr>
-                            <td>20:30 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-07">Trackstone (Polen)</a></td>
-                        </tr>
-                        <tr>
-                            <td>21:40 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-08">First Born Unicorn (Frankfurt am Main)</a></td>
-                        </tr>
-                        <tr>
-                            <td>22:50 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-09">The Freaky Friday Jailhouse Gang (Graz - Österreich)</a></td>
+                            <td>22:30 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-09">The Freaky Friday Jailhouse Gang (Graz - Österreich)</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -79,7 +69,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>wird noch bekannt gegeben</td>
+                            <td>Wir beenden das Tharalala 2025 mit der längsten Frühstuckstafel in Tharandt!<br>Los geht es 11 Uhr.</td>
                         </tr>
                     </tbody>
                 </table>
