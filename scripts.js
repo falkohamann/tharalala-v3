@@ -50,7 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 modalImage.src = artist.image;
                 modalImage.alt = artist.name;
                 modalArtistName.textContent = artist.name;
-                modalBio.textContent = artist.bio;
+                // Replace newlines with <br> and **bold** with <b> for HTML display
+                modalBio.innerHTML = artist.bio
+                    .replace(/\n/g, "<br>")
+                    .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
 
                 const socialLinks = {
                     'facebook-link': artist.social.facebook,

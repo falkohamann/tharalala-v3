@@ -33,6 +33,9 @@
                         <tr>
                             <td>20:30 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-03">Second Project</a></td>
                         </tr>
+                        <tr>
+                            <td>Austrinken mit <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-11">BluesTraXX</a></td>
+                        </tr>
                     </tbody>
                 </table>
 
@@ -58,6 +61,9 @@
                         <tr>
                             <td>22:30 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-09">The Freaky Friday Jailhouse Gang (Graz - Österreich)</a></td>
                         </tr>
+                        <tr>
+                            <td>Austrinken mit <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-11">BluesTraXX</a></td>
+                        </tr>
                     </tbody>
                 </table>
 
@@ -69,7 +75,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Wir beenden das Tharalala 2025 mit der längsten Frühstuckstafel in Tharandt!<br>Los geht es 11 Uhr.</td>
+                            <td>Wir beenden das Tharalala 2025 mit der längsten Frühstuckstafel in Tharandt!<br>Los geht es 11 Uhr.<br><br> Musikalisch begleitet von <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-11">BluesTraXX</a>!</td>
                         </tr>
                     </tbody>
                 </table>
@@ -89,9 +95,17 @@
             foreach ($artistFiles as $file) {
                 $artistData = json_decode(file_get_contents($file), true);
                 $artistId = basename($file, ".json");
-                echo "<a href='javascript:void(0);' class='artists-grid-item' data-artist-id='" . htmlspecialchars($artistId) . "'>
-                        <img src='" . htmlspecialchars($artistData['image']) . "' alt='" . htmlspecialchars($artistData['name']) . "'>
-                      </a>";
+                if (isset($artistData['name']) && strtolower($artistData['name']) === 'dummy') {
+                    // Render as non-clickable div
+                    echo "<div class='artists-grid-item'>\n";
+                    echo "    <img src='" . htmlspecialchars($artistData['image']) . "' alt=''>\n";
+                    echo "</div>";
+                } else {
+                    // Render as clickable link
+                    echo "<a href='javascript:void(0);' class='artists-grid-item' data-artist-id='" . htmlspecialchars($artistId) . "'>\n";
+                    echo "    <img src='" . htmlspecialchars($artistData['image']) . "' alt='" . htmlspecialchars($artistData['name']) . "'>\n";
+                    echo "</a>";
+                }
             }
             ?>
         </div>
