@@ -25,6 +25,7 @@
             </button>
             <ul id="nav-links">
                 <li><a href="index.php">Startseite</a></li>
+                <li><a href="#news">Aktuelles</a></li>
                 <li><a href="#program">Programm</a></li>
                 <li><a href="#artists">Künstler</a></li>
                 <li><a href="#info">Info</a></li>

@@ -13,6 +13,23 @@
     <div class="parallax-container" id="parallax1">
         <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-21.jpeg');"></div>
     </div>
+<section id="news">
+        <div class="container">
+            <img src="assets/images/news.png" alt="Aktuelles">
+            <div class="content-section">
+                <p>Hier findest du die neuesten Informationen rund um das Tharalala Musik Festival 2025!</p>
+                <ul>
+                    <li><strong>21. Mai 2025:</strong> Die ersten Bands für das Festival 2025 stehen fest – weitere Infos folgen in Kürze!</li>
+                    <li><strong>Mai 2025:</strong> Der Vorverkauf startet bald. Bleibt dran für Ticket-Updates!</li>
+                    <li><strong>April 2025:</strong> Wir arbeiten an einem noch vielfältigeren Programm und freuen uns auf neue Highlights.</li>
+                </ul>
+                <p>Schau regelmäßig vorbei oder folge uns auf Social Media, um keine Neuigkeiten zu verpassen!</p>
+            </div>
+        </div>
+    </section>
+    <div class="parallax-container" id="parallax1">
+        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-22.jpeg');"></div>
+    </div>
     <section id="program">
         <div class="container">
             <img src="assets/images/program.png" alt="Programm">
@@ -86,6 +103,7 @@
     <div class="parallax-container" id="parallax2">
         <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-13.jpeg');"></div>
     </div>
+    
 <section id="artists">
     <div class="container">
         <img src="assets/images/kuenstler.png" alt="Künstler">
