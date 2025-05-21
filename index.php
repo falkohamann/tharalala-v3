@@ -17,11 +17,19 @@
         <div class="container">
             <img src="assets/images/news.png" alt="Aktuelles">
             <div class="content-section">
-                <p>Hier findest du die neuesten Informationen rund um das Tharalala Musik Festival 2025!</p>
                 <ul>
-                    <li><strong>21. Mai 2025:</strong> Die ersten Bands für das Festival 2025 stehen fest – weitere Infos folgen in Kürze!</li>
-                    <li><strong>Mai 2025:</strong> Der Vorverkauf startet bald. Bleibt dran für Ticket-Updates!</li>
-                    <li><strong>April 2025:</strong> Wir arbeiten an einem noch vielfältigeren Programm und freuen uns auf neue Highlights.</li>
+                    <h3>23. Mai 2025</h3>  <strong>Zeigt die Welt, die euch gefällt</strong><br><br>
+                Wir suchen euren selbstgedrehten Kurzfilm mit eurem Blickwinkel auf Tharandt oder euer Leben
+                hier. Ob witzig, interessant oder provokativ.
+                Eurer Kreativität sind keine Grenzen gesetzt. Bitte bleibt fair sowie Kinder- und Jugendfrei.
+                Schickt euren 5 - 15 minütigen Spot / Short an mehrgenerationenhaus@kuppelhalle.com (falls die
+                Datei zu groß ist, bringt ihn auf einem USB Stick in der Kuppelhalle Tharandt vorbei oder meldet
+                euch, und wir finden einen geeigneten Weg der Datenübertragung)
+                Wir zeigen eure Kurzfilme zum Tharalala Festival 2025 und ihr bekommt ein Freiticket.
+                Bitte beachtet das Videoformat: Entweder 4:3 oder 16:9
+                Wir freuen uns auf eure kreativen Zusendungen.
+                Falls ihr noch Fragen habt, meldet euch einfach in der Kuppelhalle Tharandt, am besten per Email an
+                ehrgenerationenhaus@kuppelhalle.com.
                 </ul>
                 <p>Schau regelmäßig vorbei oder folge uns auf Social Media, um keine Neuigkeiten zu verpassen!</p>
             </div>
