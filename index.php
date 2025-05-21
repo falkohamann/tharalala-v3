@@ -11,7 +11,7 @@
     <img src="assets/images/header-vol3.png" alt="Willkommen beim Tharalala Musik Festival!">
 </section>
     <div class="parallax-container" id="parallax1">
-        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-21.jpeg');"></div>
+        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-21.webp');"></div>
     </div>
 <section id="news">
         <div class="container">
@@ -36,7 +36,7 @@
         </div>
     </section>
     <div class="parallax-container" id="parallax1">
-        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-22.jpeg');"></div>
+        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-22.webp');"></div>
     </div>
     <section id="program">
         <div class="container">
@@ -109,7 +109,7 @@
     </section>
 
     <div class="parallax-container" id="parallax2">
-        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-13.jpeg');"></div>
+        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-13.webp');"></div>
     </div>
     
 <section id="artists">
@@ -158,7 +158,7 @@
     </div>
 </div>
     <div class="parallax-container" id="parallax3">
-        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-23.jpeg');"></div>
+        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-23.webp');"></div>
     </div>
 
     <section id="info">
@@ -191,7 +191,7 @@
     </section>
 
     <div class="parallax-container" id="parallax4">
-        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-7.jpeg');"></div>
+        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-7.webp');"></div>
     </div>
 
     <section id="location">
@@ -208,7 +208,7 @@
     </section>
 
     <div class="parallax-container" id="parallax5">
-        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-20.jpeg');"></div>
+        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-20.webp');"></div>
     </div>
     <section id="pictures">
         <div class="container">
@@ -268,7 +268,7 @@
     </section>
 
     <div class="parallax-container" id="parallax5">
-        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-10.jpeg');"></div>
+        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-10.webp');"></div>
     </div>
     <section id="past">
         <div class="container">
@@ -295,7 +295,7 @@
     </section>
 
     <div class="parallax-container" id="parallax5">
-        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-1.jpeg');"></div>
+        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-1.webp');"></div>
     </div>
     <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -375,7 +375,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </section>
 
     <div class="parallax-container" id="parallax6">
-        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-3.jpeg');"></div>
+        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-3.webp');"></div>
     </div>
 </main>
 <div id="footer"></div>
