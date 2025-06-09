@@ -29,7 +29,7 @@
                 Bitte beachtet das Videoformat: Entweder 4:3 oder 16:9
                 Wir freuen uns auf eure kreativen Zusendungen.
                 Falls ihr noch Fragen habt, meldet euch einfach in der Kuppelhalle Tharandt, am besten per Email an
-                ehrgenerationenhaus@kuppelhalle.com.
+                mehrgenerationenhaus@kuppelhalle.com.
                 </ul>
                 <p>Schau regelmäßig vorbei oder folge uns auf Social Media, um keine Neuigkeiten zu verpassen!</p>
             </div>
@@ -122,8 +122,8 @@
                 $artistData = json_decode(file_get_contents($file), true);
                 $artistId = basename($file, ".json");
                 if (isset($artistData['name']) && strtolower($artistData['name']) === 'dummy') {
-                    // Render as non-clickable div
-                    echo "<div class='artists-grid-item'>\n";
+                    // Render as non-clickable div, add dummy-artist class for mobile hiding
+                    echo "<div class='artists-grid-item dummy-artist'>\n";
                     echo "    <img src='" . htmlspecialchars($artistData['image']) . "' alt=''>\n";
                     echo "</div>";
                 } else {
@@ -334,7 +334,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <div class="contact-info">
                     <h3>BOOKING ANFRAGEN</h3>
-                    <p class="email-address">booking@htharalala.de</p>
+                    <p class="email-address">booking@tharalala.de</p>
                 </div>
             </div>
 

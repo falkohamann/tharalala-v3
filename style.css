@@ -941,6 +941,11 @@ textarea {
     display: block; /* Ensure the image behaves like a block element */
     margin: auto; /* Center the image horizontally and vertically */
   }
+
+  /* Hide dummy artists on mobile */
+  .dummy-artist {
+    display: none !important;
+  }
 }
 
 /* --- Tharalala Summary --- */
