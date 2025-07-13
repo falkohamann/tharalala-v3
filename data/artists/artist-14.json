@@ -1,0 +1,19 @@
+{
+  "name": "Shift it Baby",
+  "bio": "",
+  "image": "assets/images/tr-pixel.png",
+  "schedule":
+    {
+      "date": "",
+      "time": "",
+      "stage": ""
+    }
+  ,
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "youtube": "",
+    "spotify": "",
+    "url": ""
+  }
+}

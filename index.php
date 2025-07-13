@@ -50,13 +50,16 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>18:00 - <a href="#">Einlaß</a></td>
+                            <td>18:00 - Einlass</td>
                         </tr>
                         <tr>
-                            <td>19:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-02">Brettel (Tharandt)</a></td>
+                            <td>19:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-12">B-Moon</a></td>
                         </tr>
                         <tr>
-                            <td>20:30 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-03">Second Project</a></td>
+                            <td>20:30 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-13">Fools 'n' Town</a></td>
+                        </tr>
+                        <tr>
+                            <td>22:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-03">Second Project</a></td>
                         </tr>
                         <tr>
                             <td>Austrinken mit <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-11">BluesTraXX</a></td>
@@ -72,19 +75,25 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>17:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-02">Einlaß</a></td>
+                            <td>16:00 - Einlass</td>
                         </tr>
                         <tr>
-                            <td>18:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-04">MalKapaun</a></td>
+                            <td>17:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-14">Shift it Baby</a></td>
                         </tr>
                         <tr>
-                            <td>19:30 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-06">The Perky Pollyvocs</a></td>
+                            <td>18:10 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-06">The Perky Pollyvocs</a></td>
                         </tr>
                         <tr>
-                            <td>21:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-08">First Born Unicorn (Frankfurt am Main)</a></td>
+                            <td>19:20 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-04">MalKapaun</a></td>
                         </tr>
                         <tr>
-                            <td>22:30 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-09">The Freaky Friday Jailhouse Gang (Graz - Österreich)</a></td>
+                            <td>20:30 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-08">First Born Unicorn (Frankfurt am Main)</a></td>
+                        </tr>
+                         <tr>
+                            <td>21:40 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-02">Brettel (Tharandt)</a></td>
+                        </tr>
+                         <tr>
+                            <td>23:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-09">The Freaky Friday Jailhouse Gang (Graz - Österreich)</a></td>
                         </tr>
                         <tr>
                             <td>Austrinken mit <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-11">BluesTraXX</a></td>
