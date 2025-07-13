@@ -53,7 +53,7 @@
                             <td>18:00 - Einlass</td>
                         </tr>
                         <tr>
-                            <td>19:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-10">B-Moon</a></td>
+                            <td>19:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-10">Bmon</a></td>
                         </tr>
                         <tr>
                             <td>20:30 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-11">Fools 'n' Town</a></td>

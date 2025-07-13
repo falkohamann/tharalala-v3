@@ -1,7 +1,7 @@
 {
-  "name": "B-Moon",
-  "bio": "",
-  "image": "assets/images/tr-pixel.png",
+  "name": "Bmon",
+  "bio": " Authentisch. Live. Handgemacht. Mal laut, mal leise - mal nachdenklich, mal besinnlich. Mit Texten, die das Leben schreibt. Ein bunter Mix aus Punk und Hardrock,verfeinert mit einer kleinen Prise Metal.",
+  "image": "data/artists/images/bmon.webp",
   "schedule":
     {
       "date": "",
@@ -10,8 +10,8 @@
     }
   ,
   "social": {
-    "facebook": "",
-    "instagram": "",
+    "facebook": "https://www.facebook.com/Bmon.Band",
+    "instagram": "https://www.instagram.com/bmon.rockband",
     "youtube": "",
     "spotify": "",
     "url": ""

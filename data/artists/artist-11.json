@@ -1,7 +1,7 @@
 {
   "name": "Fools 'n' Town",
-  "bio": "",
-  "image": "assets/images/tr-pixel.png",
+  "bio": "Wer erdig gespielten Rock mit Ausflügen in Funk, Blues und Rock'n Roll hören will, sollte FOOLS'N TOWN aus Dresden nicht verpassen. Diese fünf Musiker wollen, dass es groovt und der große Zeh nicht stillsteht. Die Bühnenerfahrung von 3 Jahrzehnten, gutes Handwerk, musikalisches Verständnis der Musiker untereinander und Sorgfalt bei der Auswahl des Grundmaterials zeichnen die Band aus. Es entstehen anspruchsvolle Coverversionen, die Ihren ganz eigenen FOOLS-Sound haben.\n\nDazu gehören die kraftvolle Stimme des Frontmanns Jens Uwe Thiel, wie auch vierstimmiger Satzgesang, eine astreine Rockgitarre von Robert Franz, Wolfgang Rißlers Hammond- und Rhodes-Sounds und das musikalische Fundament von Uwe Dietrich am Bass und Peter Fritzsche an den Drums.\n\nDie FOOLS sind sowohl auf großen Bühnen, Festivals und Open-Air-Veranstaltungen zu Hause, als auch in Clubs, Kneipen und auf Kleinkunstbühnen. Dabei kann das Programm und der Sound der Band an die Location angepasst werden.",
+  "image": "data/artists/images/foolsntown.webp",
   "schedule":
     {
       "date": "",
@@ -10,10 +10,10 @@
     }
   ,
   "social": {
-    "facebook": "",
+    "facebook": "http://www.facebook.com/foolsntown.band",
     "instagram": "",
     "youtube": "",
     "spotify": "",
-    "url": ""
+    "url": "http://www.foolsntown.de/"
   }
 }
