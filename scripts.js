@@ -18,6 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 navLinks.classList.remove("show");
             }
         });
+
+        // Close mobile menu after a nav link is clicked
+        navLinks.addEventListener("click", function (event) {
+            if (event.target.tagName === "A") {
+                hamburgerMenu.classList.remove("open");
+                navLinks.classList.remove("show");
+            }
+        });
     }
 
     // --- Artist Modal Functionality ---
