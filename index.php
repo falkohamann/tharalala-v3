@@ -29,7 +29,7 @@
                 Bitte beachtet das Videoformat: Entweder 4:3 oder 16:9
                 Wir freuen uns auf eure kreativen Zusendungen.
                 Falls ihr noch Fragen habt, meldet euch einfach in der Kuppelhalle Tharandt, am besten per Email an
-                mehrgenerationenhaus@kuppelhalle.com.
+                mehrgenerationenhaus@kuppelhalle.com. 
                 </ul>
                 <p>Schau regelmäßig vorbei oder folge uns auf Social Media, um keine Neuigkeiten zu verpassen!</p>
             </div>
