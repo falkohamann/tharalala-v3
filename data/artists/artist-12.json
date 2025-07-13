@@ -1,7 +1,7 @@
 {
-  "name": "B-Moon",
-  "bio": "",
-  "image": "assets/images/tr-pixel.png",
+  "name": "Shift it Baby",
+  "bio": "... sind Robyn und Thilo, ein australisch deutsches acoustic Duo.\nSeit vielen Jahren und unzähligen Auftritten in Bars, Klubs, bei Festivals und corporate events präsentieren sie nur mit Gitarren, Stimmen und Loopstation groovige Arrangements mit melodischen und rhythmischen Feinheiten. Eigene Songs und ausgewählte Cover interpretieren sie in einem faszinierend originellen Stil, wobei sie sich von jazzy Blues, folky Rock und einer Prise Americana gern inspirieren lassen.\nIn ihrer persönlichen und herzlichen Art kreieren sie erinnerungswürdige Auftritte, sei es in Deutschland, Spanien, Portugal, Australien oder Indien. Robyn kommt aus Melbourne in Australien und war Schauspielerin bei Theater- und Fernsehproduktionen, als auch Sängerin in verschiedenen Bands.Thilo ist Gitarrist und kommt aus der Nähe von Dresden. Mit Solo-, Band- und Theaterprojekten war er seit vielen Jahren auf Tour. Sie haben sich in Australien während einer Reise getroffen und sind seitdem musikalisch und persönlich zusammen, sei es als Duo, Solo oder auch als Band.\nSie genießen ihre gemeinsame Reise und lieben, was sie tun.",
+  "image": "data/artists/images/shiftitbaby.webp",
   "schedule":
     {
       "date": "",
@@ -10,9 +10,9 @@
     }
   ,
   "social": {
-    "facebook": "",
+    "facebook": "https://www.facebook.com/shiftitbaby/",
     "instagram": "",
-    "youtube": "",
+    "youtube": "https://www.youtube.com/channel/UCh2Y7FptPKCJ71IBgbxd2FQ",
     "spotify": "",
     "url": ""
   }
