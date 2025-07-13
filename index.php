@@ -100,7 +100,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Wir beenden das Tharalala 2025 mit der längsten Frühstuckstafel in Tharandt!<br>Los geht es 11 Uhr.<br><br> Musikalisch begleitet von <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-11">BluesTraXX</a>!</td>
+                            <td>10:00 - 13:00<br><br>Gemütliches Frühstücken  und gemeinsames Frühschoppen mit Musik von  <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-11">DJ BluesTraXX</a>.<br>Brötchen werden gesponsert. Aufstriche etc. bitte nach Belieben selbst mitbringen.</td>
                         </tr>
                     </tbody>
                 </table>
