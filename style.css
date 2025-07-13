@@ -437,7 +437,7 @@ footer {
 }
 
 footer a {
-  color: #90a955;
+  color: var(--text-color);
   text-decoration: none;
   margin: 0 10px;
 }
