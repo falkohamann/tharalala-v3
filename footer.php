@@ -9,6 +9,9 @@
             <a href="https://denkinstanz.de" target="_blank" rel="noopener noreferrer">
                 <img src="assets/images/denkinstanz.webp" alt="Denkinstanz Logo">
             </a>
+            <a href="http://www.ostsächsische-sparkasse-dresden.de/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/sparkasse.webp" alt="Sparkasse Logo" class="sparkasse-banner">
+            </a>
             <a href="https://kuppelhalle.com/" target="_blank" rel="noopener noreferrer">
                 <img src="assets/images/kuhalogo.webp" alt="Kuppelhalle Logo">
             </a>
