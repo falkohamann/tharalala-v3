@@ -73,7 +73,7 @@
                             <td>22:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-03">Second Project</a></td>
                         </tr>
                         <tr>
-                            <td>Austrinken mit <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-11">BluesTraXX</a></td>
+                            <td>Austrinken mit <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-30">BluesTraXX</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -106,7 +106,7 @@
                             <td>23:00 - <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-09">The Freaky Friday Jailhouse Gang (Graz - Österreich)</a></td>
                         </tr>
                         <tr>
-                            <td>Austrinken mit <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-11">BluesTraXX</a></td>
+                            <td>Austrinken mit <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-30">BluesTraXX</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -118,7 +118,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>10:00 - 13:00<br><br>Gemütliches Frühstücken und gemeinsames Frühschoppen mit Musik von <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-11">DJ BluesTraXX</a>.<br>Brötchen werden gesponsert. Aufstriche etc. bitte nach Belieben selbst mitbringen.</td>
+                            <td>10:00 - 13:00<br><br>Gemütliches Frühstücken und gemeinsames Frühschoppen mit Musik von <a href="javascript:void(0);" class="timetable-artist-link" data-artist-id="artist-30">DJ BluesTraXX</a>.<br>Brötchen werden gesponsert. Aufstriche etc. bitte nach Belieben selbst mitbringen.</td>
                         </tr>
                     </tbody>
                 </table>
