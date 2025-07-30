@@ -17,6 +17,26 @@
             <img src="assets/images/news.png" alt="Aktuelles">
             <div class="content-section">
                 <ul>
+                    <h3>30. Juli 2025</h3> <strong>Frühstarter BONUS!</strong><br><br>
+                    <p>
+    Die ersten 50 Gäste erhalten jeweils Freitag und Samstag ein Freigetränk! (Bier, Wein oder Alkoholfrei)
+</p>
+<p>
+    Das bedeutet: Wenn ihr Freitag oder Samstag unter den ersten 50 Gästen seid, die den Einlass des Tharalala Festivals passieren, erhaltet ihr eine Getränkemarke.
+</p>
+<p>
+    ALSO: Seid pünktlich da und lasst es euch schmecken.
+</p>
+<p>
+    <strong>Einlass Freitag:</strong> 18 Uhr<br>
+    <strong>Einlass Samstag:</strong> 16 Uhr
+</p>
+<p>
+    Beste Grüße<br>
+    Euer Tharalala Team
+</p>----------
+                    <br><br>
+
                     <h3>13. Juli 2025</h3> <strong>Gemeinsam feiern: Holt euch jetzt eure Tickets für das Tharalala Vol. 3!</strong><br><br>
                     <p>Liebe Community,</p>
                     <p>die Vorfreude steigt, denn ab sofort könnt ihr euch eure Tickets für das <strong>Tharalala Vol. 3</strong> sichern!</p>
