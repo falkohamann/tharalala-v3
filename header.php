@@ -29,7 +29,7 @@
                 <li><a href="#program">Programm</a></li>
                 <li><a href="#artists">Künstler</a></li>
                 <li><a href="#info">Info</a></li>
-                <li><a href="#location">Location</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#pictures">Bilder</a></li>
                 <li><a href="#past">Vergangenes</a></li>
                 <li><a href="#contact">Kontakt</a></li>

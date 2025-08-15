@@ -118,4 +118,50 @@ document.addEventListener("DOMContentLoaded", function () {
             artistModal.style.display = "none";
         }
     });
+
+    // --- FAQ Accordion Functionality ---
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+            const faqAnswer = faqItem.querySelector('.faq-answer');
+            const faqContent = faqAnswer.querySelector('.faq-content');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            // Close all other FAQ items
+            faqQuestions.forEach(otherQuestion => {
+                if (otherQuestion !== this) {
+                    const otherFaqItem = otherQuestion.parentElement;
+                    const otherFaqAnswer = otherFaqItem.querySelector('.faq-answer');
+                    
+                    otherQuestion.setAttribute('aria-expanded', 'false');
+                    otherFaqAnswer.classList.remove('open');
+                    otherFaqAnswer.style.maxHeight = '0px';
+                }
+            });
+            
+            // Toggle current FAQ item
+            if (isExpanded) {
+                this.setAttribute('aria-expanded', 'false');
+                faqAnswer.classList.remove('open');
+                faqAnswer.style.maxHeight = '0px';
+            } else {
+                this.setAttribute('aria-expanded', 'true');
+                faqAnswer.classList.add('open');
+                
+                // Calculate actual content height for smooth animation
+                const contentHeight = faqContent.scrollHeight;
+                faqAnswer.style.maxHeight = contentHeight + 'px';
+            }
+        });
+        
+        // Handle keyboard navigation
+        question.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                this.click();
+            }
+        });
+    });
 });
