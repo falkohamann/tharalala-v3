@@ -223,12 +223,23 @@
             </div>
         </div>
     </section>
-    <div class="parallax-container" id="parallax4">
+    <!-- <div class="parallax-container" id="parallax4">
         <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-7.webp');"></div>
-    </div>
+    </div> -->
+    <section id="faq">
+        <div class="container">
+            <div class="content-section">
+                <h2>Häufig gestellte Fragen (FAQ)</h2>
+                <!-- FAQ content will be added here later -->
+                <p>Diese Sektion wird bald mit häufig gestellten Fragen und Antworten gefüllt.</p>
+            </div>
+        </div>
+    </section>
+    <!-- <div class="parallax-container" id="parallax5">
+        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-13.webp');"></div>
+    </div> -->
     <section id="location">
         <div class="container">
-            <img src="assets/images/location.png" alt="Location">
             <div class="content-section">
                 <p>Die Kuppelhalle Tharandt ist ein lebendiges Mehrgenerationenhaus und soziokulturelles Zentrum, das unter dem Motto "Irgendwas ist immer!" vielfältige Veranstaltungen und Angebote für alle Altersgruppen bietet. Mit ihrem einzigartigen architektonischen Charme und der flexiblen Raumgestaltung eignet sich die Kuppelhalle hervorragend als Partylocation für das Musikfestival Tharalala. Die einladende Atmosphäre und die zentrale Lage machen sie zum idealen Treffpunkt für Musikliebhaber und Feiernde, die gemeinsam unvergessliche Momente erleben möchten.</p>
                 <p>Adresse & Anfahrt:<br><br>Kuppelhalle e.V.<br>Pienner Str. 13<br>01737 Tharandt</p>
@@ -238,7 +249,7 @@
             </div>
         </div>
     </section>
-    <div class="parallax-container" id="parallax5">
+    <div class="parallax-container" id="parallax6">
         <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-20.webp');"></div>
     </div>
     <section id="pictures">
