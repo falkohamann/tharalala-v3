@@ -1083,12 +1083,12 @@ textarea {
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.4s ease;
     background-color: #ffffff;
 }
 
 .faq-answer.open {
-    max-height: 1000px;
+    overflow: visible;
 }
 
 .faq-content {
