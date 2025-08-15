@@ -237,15 +237,15 @@
 
                                 <p><strong>Unser Zeitplan im Überblick:</strong></p>
                                 
-                                <p><strong>Freitag, 15. August 2025 – Der Start ins Wochenende</strong><br>
+                                <p><strong>Freitag, 22. August 2025 – Der Start ins Wochenende</strong><br>
                                 Einlass: ab 18:00 Uhr<br>
                                 Live-Musik: Ab 19:00 Uhr geht es los! Der Abend wird mit einem gemütlichen „Austrinken" zu den Klängen von BluesTraXX abgerundet.</p>
-                                
-                                <p><strong>Samstag, 16. August 2025 – Der große Festivaltag</strong><br>
+
+                                <p><strong>Samstag, 23. August 2025 – Der große Festivaltag</strong><br>
                                 Einlass: ab 16:00 Uhr<br>
                                 Live-Musik: Ab 17:00 Uhr erwartet euch ein volles Programm bis in die Nacht, gefolgt von einem entspannten Ausklang mit BluesTraXX.</p>
                                 
-                                <p><strong>Sonntag, 17. August 2025 – Der gemütliche Ausklang</strong><br>
+                                <p><strong>Sonntag, 24. August 2025 – Der gemütliche Ausklang</strong><br>
                                 Frühstück & Frühschoppen: Von 10:00 bis 13:00 Uhr laden wir euch herzlich zum gemeinsamen Frühstück ein. Für Musik von DJ BluesTraXX und gesponserte Brötchen ist gesorgt – bringt einfach eure Lieblingsaufstriche mit und lasst uns das Wochenende entspannt beenden.</p>
                             
 
