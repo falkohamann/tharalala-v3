@@ -14,7 +14,6 @@
     </div>
     <section id="news">
         <div class="container">
-            <img src="assets/images/news.png" alt="Aktuelles">
             <div class="content-section">
                 <ul>
                     <h3>30. Juli 2025</h3> <strong>Frühstarter BONUS!</strong><br><br>
@@ -71,7 +70,6 @@
     </div>
     <section id="program">
         <div class="container">
-            <img src="assets/images/program.png" alt="Programm">
             <div class="program-tables-container">
                 <table class="program-table">
                     <thead>
@@ -150,7 +148,6 @@
     </div>
     <section id="artists">
         <div class="container">
-            <img src="assets/images/kuenstler.png" alt="Künstler">
             <div class="artists-grid">
                 <?php
                 $artistFiles = glob("data/artists/*.json");
@@ -197,7 +194,6 @@
     </div>
     <section id="info">
         <div class="container">
-            <img src="assets/images/info.png" alt="Festival Info">
             <div class="content-section">
                 <h2>Entdecke Tharalala – Dein Musikfestival in Tharandt!</h2>
                 <p>Willkommen beim Tharalala Musik Festival! Tauche ein in ein besonderes Erlebnis, das Musik und Gemeinschaft in den Mittelpunkt stellt. Mitten in Tharandt erwartet dich:</p>
@@ -223,28 +219,196 @@
             </div>
         </div>
     </section>
-    <!-- <div class="parallax-container" id="parallax4">
-        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-7.webp');"></div>
-    </div> -->
+    <div class="parallax-container" id="parallax4">
+    <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-7.webp');"></div>
+    </div>
     <section id="faq">
         <div class="container">
             <div class="content-section">
                 <h2>Häufig gestellte Fragen (FAQ)</h2>
-                <!-- FAQ content will be added here later -->
-                <p>Diese Sektion wird bald mit häufig gestellten Fragen und Antworten gefüllt.</p>
-            </div>
-        </div>
-    </section>
-    <!-- <div class="parallax-container" id="parallax5">
-        <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-13.webp');"></div>
-    </div> -->
-    <section id="location">
-        <div class="container">
-            <div class="content-section">
-                <p>Die Kuppelhalle Tharandt ist ein lebendiges Mehrgenerationenhaus und soziokulturelles Zentrum, das unter dem Motto "Irgendwas ist immer!" vielfältige Veranstaltungen und Angebote für alle Altersgruppen bietet. Mit ihrem einzigartigen architektonischen Charme und der flexiblen Raumgestaltung eignet sich die Kuppelhalle hervorragend als Partylocation für das Musikfestival Tharalala. Die einladende Atmosphäre und die zentrale Lage machen sie zum idealen Treffpunkt für Musikliebhaber und Feiernde, die gemeinsam unvergessliche Momente erleben möchten.</p>
-                <p>Adresse & Anfahrt:<br><br>Kuppelhalle e.V.<br>Pienner Str. 13<br>01737 Tharandt</p>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.8972397889434!2d13.581857799999998!3d50.981089999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709db66d1315023%3A0x53f84a21561fa28c!2sKuppelhalle%20Tharandt!5e0!3m2!1sde!2sde!4v1737814041368!5m2!1sde!2sde" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Wann und wo findet das Festival statt?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+
+                                <p><strong>Unser Zeitplan im Überblick:</strong></p>
+                                
+                                <p><strong>Freitag, 15. August 2025 – Der Start ins Wochenende</strong><br>
+                                Einlass: ab 18:00 Uhr<br>
+                                Live-Musik: Ab 19:00 Uhr geht es los! Der Abend wird mit einem gemütlichen „Austrinken" zu den Klängen von BluesTraXX abgerundet.</p>
+                                
+                                <p><strong>Samstag, 16. August 2025 – Der große Festivaltag</strong><br>
+                                Einlass: ab 16:00 Uhr<br>
+                                Live-Musik: Ab 17:00 Uhr erwartet euch ein volles Programm bis in die Nacht, gefolgt von einem entspannten Ausklang mit BluesTraXX.</p>
+                                
+                                <p><strong>Sonntag, 17. August 2025 – Der gemütliche Ausklang</strong><br>
+                                Frühstück & Frühschoppen: Von 10:00 bis 13:00 Uhr laden wir euch herzlich zum gemeinsamen Frühstück ein. Für Musik von DJ BluesTraXX und gesponserte Brötchen ist gesorgt – bringt einfach eure Lieblingsaufstriche mit und lasst uns das Wochenende entspannt beenden.</p>
+                            
+
+                                <p>Wir feiern mit euch das ganze Wochenende in und an der Kuppelhalle Tharandt!</p>
+                                
+                                <p><strong>Veranstaltungsort:</strong><br>
+                                Kuppelhalle Tharandt<br>
+                                Pienner Str. 13<br>
+                                01737 Tharandt</p>
+
+                                <div class="map-container">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.8972397889434!2d13.581857799999998!3d50.981089999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709db66d1315023%3A0x53f84a21561fa28c!2sKuppelhalle%20Tharandt!5e0!3m2!1sde!2sde!4v1737814041368!5m2!1sde!2sde" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Was kostet ein Ticket?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p><strong>Unsere Ticket-Optionen im Überblick:</strong></p>
+                                
+                                <p><strong>Das ganze Wochenende:</strong><br>
+                                Normalpreis: 22€<br>
+                                Soli-Preis (neu!): 25€</p>
+                                
+                                <p><strong>Freitag:</strong><br>
+                                Normalpreis: 9€<br>
+                                Soli-Preis (neu!): 12€</p>
+                                
+                                <p><strong>Samstag:</strong><br>
+                                Normalpreis: 17€<br>
+                                Soli-Preis (neu!): 20€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Was ist der neue Soli-Preis?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p>Mit dem Soli-Preis könnt ihr ganz direkt etwas Gutes tun! Dieser kleine, freiwillige Aufpreis ist eine direkte Spende für den Erhalt unserer geliebten Kuppelhalle. Euer Beitrag hilft dabei, diesen einzigartigen Ort zu pflegen und damit das kulturelle Leben hier in Tharandt langfristig zu sichern. Jeder Soli-Beitrag ist ein direktes Dankeschön an die Halle, die unser Festival erst möglich macht!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Wo bekomme ich mein Ticket?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p>Es gibt keinen Online-Vorverkauf! Kommt einfach bei uns in der Kuppelhalle vorbei, um eure Tickets direkt zu kaufen. Die perfekte Gelegenheit, um schon mal "Hallo" zu sagen! Wir freuen uns riesig auf euch und danken allen, die mit dem Soli-Preis die Kultur in Tharandt unterstützen! Natürlich könnt ihr euer Ticket auch direkt am Festivaleingang kaufen, wenn ihr ankommt.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Ab wie vielen Jahren darf ich aufs Festival? (Muttizettel)</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p><strong>Unter 16 Jahre:</strong> Zutritt nur mit erziehungsberechtigter Person oder mit Erziehungsbeauftragung (Muttizettel) und einer volljährigen Begleitperson.</p>
+                                <p><strong>16–17 Jahre:</strong> Bis 24:00 Uhr ohne Begleitung, danach nur mit Erziehungsberechtigtem oder mit Muttizettel und volljähriger Begleitperson.</p>
+                                <p><a href="Muttizettel.pdf" target="_blank">Muttizettel herunterladen (PDF)</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Kann ich das Gelände zwischendurch verlassen (Re-Entry)?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p>Ja, mit deinem Festivalbändchen kannst du das Festivalgelände während der Öffnungszeiten jederzeit verlassen und wieder betreten.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Darf ich mein Haustier mitbringen?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p>Aus Rücksicht auf Lärm, Menschenmengen und Sicherheit sind Tiere auf dem Festival- und Campinggelände nicht erlaubt. Ausnahme: Zertifizierte Assistenzhunde mit Nachweis.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Darf ich eigene Getränke oder eigenes Essen mit aufs Festivalgelände nehmen?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p>Auf das Festivalgelände dürfen leider keine eigenen Getränke oder Essen mitgebracht werden. Damit finanzieren wir unter anderem die faire Bezahlung unserer Künstler*innen und die Infrastruktur.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Wie komme ich zum Festival?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p>Wir empfehlen die Anreise mit dem öffentlichen Nahverkehr (ÖPNV).</p>
+                                <p>Fahrt mit dem Zug oder der S-Bahn bis zum Bahnhof Tharandt. Von dort erreicht ihr das Festivalgelände in der Kuppelhalle (Pienner Str. 13) nach einem einfachen Fußweg von etwa zehn Minuten.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Welche Zahlungsmittel akzeptiert ihr?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p>Bargeld! Ein Geldautomat steht nicht zur Verfügung – bitte bring genug Bargeld mit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Findet das Festival auch bei schlechtem Wetter statt?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p>Aber sicher! Wir sind wetterfest. Sollte es regnen, verlegen wir das Geschehen einfach in unsere wunderschöne Kuppelhalle. Das Festival findet also bei jedem Wetter statt!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Darf ich fotografieren oder filmen?</span>
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p>Handys und kleine Kameras sind ok. Spiegelreflex-/Systemkameras mit Wechselobjektiven nur mit Akkreditierung. Drohnen sind verboten.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -254,7 +418,6 @@
     </div>
     <section id="pictures">
         <div class="container">
-            <img src="assets/images/pictures.png" alt="Bilder">
             <div class="content-section">
                 <div class="text-container">
                     <p>Taucht ein in magische Festival-Momente! Unsere Bildergalerie nimmt euch mit auf eine visuelle Reise durch das Tharalala Musik Festival - von mitreißenden Live-Performances über ausgelassene Tanzszenen bis hin zu den kleinen, besonderen Augenblicken, die dieses Festival so einzigartig machen. Lasst die Atmosphäre noch einmal aufleben und entdeckt vielleicht sogar euch selbst in einem der Schnappschüsse.</p>
@@ -312,7 +475,6 @@
     </div>
     <section id="past">
         <div class="container">
-            <img src="assets/images/past.png" alt="Vergangenes">
             <div class="content-section">
                 <h2>Rückblick: Zwei Jahre Tharalala Musikfestival</h2>
                 <p>
@@ -363,7 +525,6 @@
     ?>
     <section id="contact">
         <div class="container">
-            <img src="assets/images/contact.png" alt="Kontakt" class="contact-image">
             <div class="content-wrapper">
                 <div class="contact-section">
                     <div class="contact-info">

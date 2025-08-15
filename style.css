@@ -1018,3 +1018,120 @@ textarea {
     margin-bottom: 1rem;
     text-align: justify; /* Justify text for a clean look */
 }
+
+/* --- FAQ Styles --- */
+.faq-category {
+    margin: 2rem 0 1rem 0;
+}
+
+.faq-category h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.faq-accordion {
+    max-width: 100%;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: var(--secondary-color);
+}
+
+.faq-question:focus {
+    outline: 2px solid var(--text-color);
+    outline-offset: -2px;
+}
+
+.faq-icon {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    color: var(--text-color);
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #ffffff;
+}
+
+.faq-answer.open {
+    max-height: 1000px;
+}
+
+.faq-content {
+    padding: 1.5rem;
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+.faq-content p {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.faq-content p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-content strong {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.faq-content a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.faq-content a:hover {
+    color: var(--secondary-color);
+}
+
+/* Mobile responsiveness for FAQ */
+@media (max-width: 768px) {
+    .faq-question {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .faq-content {
+        padding: 1rem;
+    }
+    
+    .faq-category h3 {
+        font-size: 1.3rem;
+    }
+}
