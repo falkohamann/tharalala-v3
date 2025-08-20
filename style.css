@@ -7,6 +7,16 @@
   --font-family: 'Arial', sans-serif;
 }
 
+/* Make all links use the same color as <h3> */
+a, a:visited {
+  color: var(--primary-color) !important;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+a:hover, a:focus {
+  color: var(--secondary-color) !important;
+}
+
 /* --- Basic Reset --- */
 * {
   margin: 0;
@@ -85,8 +95,8 @@ nav li {
 }
 
 nav a {
-  color: #ecf39e;
-  text-decoration: none;
+  color: inherit;
+  text-decoration: inherit;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -308,8 +318,8 @@ h2 {
 }
 
 .program-table a {
-  color: var(--primary-color);
-  text-decoration: none;
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .program-table a:hover {
@@ -416,7 +426,7 @@ h2 {
 }
 
 .social-links a {
-  color: var(--primary-color);
+  color: inherit;
   font-size: 1.5rem;
   transition: color 0.3s ease;
 }
@@ -437,8 +447,8 @@ footer {
 }
 
 footer a {
-  color: var(--text-color);
-  text-decoration: none;
+  color: inherit;
+  text-decoration: inherit;
   margin: 0 10px;
 }
 
@@ -1121,8 +1131,8 @@ textarea {
 }
 
 .faq-content a {
-    color: var(--primary-color);
-    text-decoration: underline;
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .faq-content a:hover {
