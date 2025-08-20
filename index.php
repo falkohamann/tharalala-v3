@@ -22,6 +22,7 @@
     Beste Grüße<br>
     Euer Tharalala Team
 </p>----------
+                    <br><br>
                     <h3>30. Juli 2025</h3> <strong>Frühstarter BONUS!</strong><br><br>
                     <p>
     Die ersten 50 Gäste erhalten jeweils Freitag und Samstag ein Freigetränk! (Bier, Wein oder Alkoholfrei)
