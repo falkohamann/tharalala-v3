@@ -18,6 +18,10 @@
                 <ul>
                     <h3>20.08.2025</h3><strong>Tharalala bei Radio Dresden</strong>
                 <p>Die Spannung steigt! Nur noch zweimal schlafen, dann startet das Tharalala-Festival! Zur Einstimmung hat unser Mario bei Radio Dresden schon mal aus dem Nähkästchen geplaudert. <a href="https://www.radiodresden.de/beitrag/countdown-fuer-musikfestival-in-tharandt-875016/" target="_blank" rel="noopener">Hier gehts zum Interview</a></p>
+                    <p>
+    Beste Grüße<br>
+    Euer Tharalala Team
+</p>----------
                     <h3>30. Juli 2025</h3> <strong>Frühstarter BONUS!</strong><br><br>
                     <p>
     Die ersten 50 Gäste erhalten jeweils Freitag und Samstag ein Freigetränk! (Bier, Wein oder Alkoholfrei)
