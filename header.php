@@ -15,7 +15,7 @@
             <img src="assets/images/logo_rund_tr.png" alt="Tharalala Festival Logo">
         </a>
         <div class="event-dates">
-            <strong>22.08.2025 bis 24.08.2025</strong>
+            <strong>21.08.2026 bis 23.08.2026</strong>
         </div>
         <nav>
             <button id="hamburger-menu" aria-label="Menü öffnen">
