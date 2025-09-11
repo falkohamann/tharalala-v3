@@ -636,6 +636,9 @@ textarea {
         transition: max-height 0.3s ease-out;
         overflow: hidden;
         background-color: #ebeb9f;  /* Changed from white/default */
+        /* Performance optimizations */
+        contain: layout style;
+        will-change: max-height;
     }
 
     .image-grid.collapsed {
@@ -651,6 +654,9 @@ textarea {
     background-color: #ebeb9f;
     cursor: pointer;
     position: relative; /* Add for positioning pseudo-elements */
+    /* Performance optimizations */
+    will-change: transform;
+    contain: layout style paint;
 }
 
 .image-item img {
@@ -658,7 +664,10 @@ textarea {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    cursor: pointer; /* Add this line */
+    cursor: pointer;
+    /* Performance optimizations */
+    will-change: transform;
+    transform: translateZ(0); /* Force hardware acceleration */
 }
 
     .image-item:hover img {
@@ -810,6 +819,27 @@ textarea {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* Load more button styling */
+.load-more-btn {
+    grid-column: 1 / -1;
+    padding: 15px 30px;
+    background-color: #3B5F30;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    font-family: var(--font-family);
+}
+
+.load-more-btn:hover {
+    background-color: #31572c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .text-container {

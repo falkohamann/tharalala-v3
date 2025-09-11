@@ -1,5 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Gallery script loaded');
+    console.log('Gallery script loaded - DEBUG VERSION');
+    
+    // Debug: Check what we have in the DOM
+    const galleryContainer = document.querySelector('.gallery-container');
+    console.log('Gallery container found:', galleryContainer);
+    
+    const allImageItems = document.querySelectorAll('.image-item');
+    console.log('Total image items found:', allImageItems.length);
+    
+    const allImages = document.querySelectorAll('.image-item img');
+    console.log('Total images found:', allImages.length);
+    
+    if (allImages.length > 0) {
+        const firstImg = allImages[0];
+        console.log('First image src:', firstImg.src);
+        console.log('First image data-src:', firstImg.dataset.src);
+        console.log('First image element:', firstImg);
+    }
     
     // Enhanced folder toggle functionality with lazy loading
     const folderHeaders = document.querySelectorAll('.folder-header');
@@ -13,6 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const toggleBtn = this.querySelector('.toggle-btn');
             const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
 
+            console.log('Current expanded state:', isExpanded);
+            console.log('Image grid:', imageGrid);
+
             // Toggle the collapsed state
             imageGrid.classList.toggle('collapsed');
             toggleBtn.setAttribute('aria-expanded', !isExpanded);
@@ -20,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // If expanding for the first time, load images lazily
             if (!isExpanded && !imageGrid.dataset.loaded) {
                 console.log('Loading images for first time');
-                loadImagesForFolder(imageGrid);
+                setupImageLoader(imageGrid);
                 imageGrid.dataset.loaded = 'true';
             }
 
@@ -30,32 +50,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(() => {
                     const gridHeight = imageGrid.scrollHeight;
                     imageGrid.style.maxHeight = gridHeight + 'px';
+                    console.log('Set grid height to:', gridHeight + 'px');
                 }, 100);
             } else {
                 imageGrid.style.maxHeight = '0';
+                console.log('Collapsed grid');
             }
         });
     });
 
-    function loadImagesForFolder(imageGrid) {
-        const imageItems = imageGrid.querySelectorAll('.image-item');
-        console.log('Loading images for folder, found items:', imageItems.length);
-        
-        imageItems.forEach((item, index) => {
+    function setupImageLoader(imageGrid) {
+        const imageItems = Array.from(imageGrid.querySelectorAll('.image-item'));
+        console.log('Setting up loader for', imageItems.length, 'images');
+        imageItems.forEach((item, i) => {
             const img = item.querySelector('img');
             if (img && img.dataset.src) {
-                console.log('Processing image with data-src:', img.dataset.src);
-                // Simply set the src directly for now
                 img.src = img.dataset.src;
                 img.removeAttribute('data-src');
                 item.classList.add('loaded');
-            } else {
-                console.log('Image element:', img, 'data-src:', img ? img.dataset.src : 'no img');
             }
         });
     }
 
-    // Enhanced modal functionality with navigation
+    // Modal functionality
     const modal = document.querySelector('.gallery-modal');
     const modalImg = document.querySelector('.gallery-modal-image');
     const closeButton = document.querySelector('.gallery-close-button');
@@ -64,18 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let currentImages = [];
     let currentImageIndex = 0;
-
-    function setupImageClickHandlers() {
-        const galleryImages = document.querySelectorAll('.image-item img');
-        
-        galleryImages.forEach((img, index) => {
-            img.addEventListener('click', function() {
-                if (this.src && !this.dataset.src) { // Only if image is loaded
-                    openModal(this, index);
-                }
-            });
-        });
-    }
 
     function openModal(clickedImg, index) {
         // Get all loaded images from the same folder
@@ -169,22 +174,5 @@ document.addEventListener('DOMContentLoaded', function() {
                     break;
             }
         }
-    });
-
-    // Initialize click handlers for any pre-loaded images
-    setupImageClickHandlers();
-    
-    // Set up a mutation observer to handle dynamically loaded images
-    const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            if (mutation.type === 'attributes' && mutation.attributeName === 'src') {
-                setupImageClickHandlers();
-            }
-        });
-    });
-
-    // Observe all image elements for src changes
-    document.querySelectorAll('.image-item img').forEach(img => {
-        observer.observe(img, { attributes: true, attributeFilter: ['src'] });
     });
 });

@@ -551,7 +551,7 @@
     </div>
 </main>
 <div id="footer"></div>
-<script src="gallery.js"></script>
+<script src="gallery.js?v=5"></script>
 <?php include 'footer.php'; ?>
 </body>
 </html>
