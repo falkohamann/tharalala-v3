@@ -4,7 +4,7 @@
     <section id="welcome-banner">
         <div class="moving-text-container">
             <span class="moving-text line1">Willkommen zum Tharalala!</span>
-            <span class="moving-text line2">22.08. - 24.08. 2025</span>
+            <span class="moving-text line2">21.08. - 23.08. 2026</span>
             <span class="moving-text line3">Kuppelhalle Tharandt</span>
         </div>
         <img src="assets/images/header-vol3.png" alt="Willkommen beim Tharalala Musik Festival!">
@@ -16,59 +16,24 @@
         <div class="container">
             <div class="content-section">
                 <ul>
-                    <h3>20.08.2025</h3><strong>Tharalala bei Radio Dresden</strong>
-                <p>Die Spannung steigt! Nur noch zweimal schlafen, dann startet das Tharalala-Festival! Zur Einstimmung hat unser Mario bei Radio Dresden schon mal aus dem Nähkästchen geplaudert. <a href="https://www.radiodresden.de/beitrag/countdown-fuer-musikfestival-in-tharandt-875016/" target="_blank" rel="noopener">Hier gehts zum Interview</a></p>
-                    <p>
-    Beste Grüße<br>
-    Euer Tharalala Team
-</p>----------
+                    <h3>11.09.2025</h3><strong>Momente, die bleiben</strong>
+                <p>
+                    Vom 22. bis 24. August fand die nunmehr dritte Auflage des Tharalala-Festivals auf dem Gelände der Kuppelhalle statt – und was für eine! Auch wenn das Wetter eher kalt war, ließen sich die Besucher die Laune nicht verderben. Das Festival bot ein unvergessliches Wochenende voller handgemachter Klänge!<p>
+                    Die Atmosphäre auf dem Festivalgelände war von Anfang an herzlich und familiär. Überall sah man fröhliche Gesichter; es wurde getanzt, gelacht und das Leben gefeiert. Dieses gewisse Etwas,  war während der gesamten Zeit spürbar und zog alle Besucher in seinen Bann. 
+                    Auf zwei Bühnen spielten insgesamt neun Bands aus der Umgebung und aus der Ferne, unterstützt vom Tharandter DJ BluesTraXX. Unter den Bands und Künstlern fanden sich Altbekannte, wie etwa Brettel, den wir bereits zum dritten Mal begrüßen durften oder The Freaky Friday Jailhouse Gang. 
+                    Zum ersten Mal waren u. a. die Band First Born Unicorn (Frankfurt a. M.) sowie Bmon und Fools’n’Town dabei.<p>
+                    Ein traditionelles Highlight war erneut die Frühstückstafel, dieses Mal am Sonntagvormittag, bei der sich Akteure, Nachbarn und Freunde trafen und gemeinsam das Festival ausklingen ließen.<p>
+                    Für das leibliche Wohl war ebenfalls bestens gesorgt. Die Freiwillige Feuerwehr Tharandt versorgte die Gäste mit Leckerem vom Grill. So mancher Cocktail, wärmender Glühwein oder auch ein Bier gingen über den Tresen.<p>
+                    Ein Festival dieser Art wäre ohne die Unterstützung so vieler Menschen nicht möglich. Ein riesiges Dankeschön gilt allen ehrenamtlichen Festivalhelfern und den Mitgliedern des Kuppelhalle Tharandt e.V. für ihren unermüdlichen Einsatz, den Nachbarn für ihr Verständnis sowie allen Spendern, Sponsoren und Förderern. 
+                    Ihr alle habt den fantastischen Geist auf das Tharalala-Festival gebracht!<p>
+                    Zusammenfassend war das Tharalala Festival 2025 ein Höhepunkt im Tharandter Kulturjahr. Ein unvergessliches Wochenende mit toller Musik, lachenden Gesichtern und einer Atmosphäre, die uns schon jetzt voller Vorfreude auf eine vierte Auflage blicken lässt.<p>
+                    Beste Grüße<br>
+                    Euer Tharalala Team
+                    </p>----------
                     <br><br>
-                    <h3>30. Juli 2025</h3> <strong>Frühstarter BONUS!</strong><br><br>
-                    <p>
-    Die ersten 50 Gäste erhalten jeweils Freitag und Samstag ein Freigetränk! (Bier, Wein oder Alkoholfrei)
-</p>
-<p>
-    Das bedeutet: Wenn ihr Freitag oder Samstag unter den ersten 50 Gästen seid, die den Einlass des Tharalala Festivals passieren, erhaltet ihr eine Getränkemarke.
-</p>
-<p>
-    ALSO: Seid pünktlich da und lasst es euch schmecken.
-</p>
-<p>
-    <strong>Einlass Freitag:</strong> 18 Uhr<br>
-    <strong>Einlass Samstag:</strong> 16 Uhr
-</p>
-<p>
-    Beste Grüße<br>
-    Euer Tharalala Team
-</p>----------
-                    <br><br>
-
-                    <h3>13. Juli 2025</h3> <strong>Gemeinsam feiern: Holt euch jetzt eure Tickets für das Tharalala Vol. 3!</strong><br><br>
-                    <p>Liebe Community,</p>
-                    <p>die Vorfreude steigt, denn ab sofort könnt ihr euch eure Tickets für das <strong>Tharalala Vol. 3</strong> sichern!</p>
-                    <p>Für uns steht die Gemeinschaft im Mittelpunkt. Wir möchten, dass alle mit uns feiern können und gleichzeitig der Ort gestärkt wird, der uns zusammenbringt. Deshalb führen wir dieses Jahr zum ersten Mal den <strong>Soli-Preis</strong> ein!</p>
-                    <p>Ihr habt bei jedem Ticket die Wahl:</p>
-                    <h3>Unsere Ticket-Optionen im Überblick:</h3>
-                    <ul>
-                        <li><strong>Das ganze Wochenende:</strong><br>
-                            Normalpreis: 22€<br>
-                            Soli-Preis (neu!): 25€</li>
-                        <br>
-                        <li><strong>Freitag:</strong><br>
-                            Normalpreis: 9€<br>
-                            Soli-Preis (neu!): 12€</li>
-                        <br>
-                        <li><strong>Samstag:</strong><br>
-                            Normalpreis: 17€<br>
-                            Soli-Preis (neu!): 20€</li>
-                    </ul>
-                    <br>
-                    <h3>Was ist der neue Soli-Preis?</h3>
-                    <p>Mit dem Soli-Preis könnt ihr ganz direkt etwas Gutes tun! Dieser kleine, freiwillige Aufpreis ist eine direkte Spende für den Erhalt unserer geliebten <strong>Kuppelhalle</strong>. Euer Beitrag hilft dabei, diesen einzigartigen Ort zu pflegen und damit das kulturelle Leben hier in Tharandt langfristig zu sichern. Jeder Soli-Beitrag ist ein direktes Dankeschön an die Halle, die unser Festival erst möglich macht!</p>
-                    <h3>Wo gibt es die Tickets?</h3>
-                    <p>Es gibt keinen Online-Vorverkauf! Kommt einfach bei uns in der <strong>Kuppelhalle</strong> vorbei, um eure Tickets direkt zu kaufen. Die perfekte Gelegenheit, um schon mal "Hallo" zu sagen! Wir freuen uns riesig auf euch und danken allen, die mit dem Soli-Preis die Kultur in Tharandt unterstützen!</p>
-                </ul>
-                <p>Schau regelmäßig vorbei oder folge uns auf Social Media, um keine Neuigkeiten zu verpassen!</p>
+                    <h3>11.09.2025</h3> <strong>Bilder</strong><br><br>
+                    <p>Die Bilder 2025 sind online!
+                    </p>
             </div>
         </div>
     </section>
