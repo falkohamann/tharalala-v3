@@ -407,9 +407,12 @@
                         $images = glob($subfolder . '/*.{webp}', GLOB_BRACE);
 
                         if (!empty($images)) {
+                            // Sort images by name for consistent order
+                            sort($images);
+                            
                             echo "<section class='gallery-section'>";
                             echo "<div class='folder-header'>";
-                            echo "<h2>" . htmlspecialchars($folderName) . "</h2>";
+                            echo "<h2>" . htmlspecialchars($folderName) . " (" . count($images) . " Bilder)</h2>";
                             echo "<button class='toggle-btn' aria-expanded='false'>
                                     <span class='icon'>▼</span>
                                     <span class='sr-only'>Toggle folder</span>
@@ -420,7 +423,9 @@
                             foreach ($images as $image) {
                                 $imageName = basename($image);
                                 echo "<div class='image-item'>";
-                                echo "<img src='" . htmlspecialchars($image) . "'
+                                // Use data-src for lazy loading, placeholder src
+                                echo "<img src='data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" width=\"250\" height=\"250\"%3E%3Crect width=\"100%25\" height=\"100%25\" fill=\"%23f0f0f0\"/%3E%3Ctext x=\"50%25\" y=\"50%25\" text-anchor=\"middle\" dy=\".3em\" fill=\"%23999\"%3ELädt...%3C/text%3E%3C/svg%3E'
+                                          data-src='" . htmlspecialchars($image) . "'
                                           alt='" . htmlspecialchars($imageName) . "'
                                           loading='lazy'>";
                                 echo "</div>";
@@ -546,7 +551,7 @@
     </div>
 </main>
 <div id="footer"></div>
-<script src="gallery.js"></script>
+<script src="gallery.js?v=5"></script>
 <?php include 'footer.php'; ?>
 </body>
 </html>
