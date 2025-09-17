@@ -466,8 +466,10 @@ footer a:hover {
 }
 
 .footer-logo img {
-  height: 150px;
+  max-height: 150px;
+  height: auto;
   width: auto;
+  max-width: 100%;
 }
 
 .sparkasse-banner {
@@ -480,17 +482,25 @@ footer a:hover {
   margin: 0 0.5rem;
 }
 
+/* Slightly enlarge DSEE logo compared to others */
+.footer-logo img.dsee-logo {
+  max-height: 170px; /* Increased from 150px */
+}
+
 @media (max-width: 768px) {
   .footer-logo {
     flex-direction: column;
     gap: 0.5rem;
   }
   .footer-logo img {
-    height: 120px;
+    max-height: 90px; /* Reduced for better fit on small screens */
+    height: auto;
     width: auto;
+    max-width: 100%; /* Ensure wide logos shrink to fit viewport */
   }
-  .footer-logo a:nth-child(2) {
-    order: 3;
+  /* Make DSEE logo a bit larger than others on mobile */
+  .footer-logo img.dsee-logo {
+    max-height: 120px; /* Slightly larger (was 110px) */
   }
   .sparkasse-banner {
     margin-left: 0;
