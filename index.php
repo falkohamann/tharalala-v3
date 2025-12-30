@@ -7,7 +7,7 @@
             <span class="moving-text line2">21.08. - 23.08. 2026</span>
             <span class="moving-text line3">Kuppelhalle Tharandt</span>
         </div>
-        <img src="assets/images/header-vol3.png" alt="Willkommen beim Tharalala Musik Festival!">
+        <img src="assets/images/header_v4.webp" alt="Willkommen beim Tharalala Musik Festival!">
     </section>
     <div class="parallax-container" id="parallax1">
         <div class="parallax-background" style="background-image: url('assets/images/bg-images/bg-21.webp');"></div>
