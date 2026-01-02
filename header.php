@@ -7,6 +7,7 @@
     <title>Tharalala Musik Festival</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="dc58dcc5-e79e-434e-8312-3df175cde625"></script>
     <script defer src="scripts.js"></script>
 </head>
 <header>
